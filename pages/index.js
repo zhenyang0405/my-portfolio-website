@@ -10,7 +10,6 @@ import { useWindowDimensions } from '../functions/custom-hook';
 
 export default function Home() {
 
-  const [showCode, setShowCode] = useState(false);
   const [dark, setDark] = useState(false);
   const [toggleTabIndex, setToggleTabIndex] = useState(1);
   const [buttonColor, setButtonColor] = useState('midnightblue');
@@ -61,7 +60,6 @@ export default function Home() {
         <div className={styles.intro__container}>
           <div className={styles.top_bar}>
               <div className={styles.top_left}>
-                {/* <p className={styles.top_left__menu}>Zhen Yang</p> */}
                 <div className={styles.main_symbol}>
                   {(dark)
                     ? <Image src='/logo/symbol-white.png' alt='symbol' width={30} height={30} />
@@ -94,7 +92,6 @@ export default function Home() {
               </div>
             </div>
           <div className={styles.my__container}>
-            
             <div className={styles.my_name__container}>
               <div className={styles.my_name__left}>
                 {(width < 1100)
@@ -127,8 +124,6 @@ export default function Home() {
                     </div>
                   </>
               }
-              
-              
             </div>
             <div className={styles.my_photo__container}>
               <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} layout='responsive' />
@@ -137,6 +132,8 @@ export default function Home() {
           </div>
         </div>
         
+
+
         {/* Technologies Section */}
         <div className={styles.technologies_container} data-aos='fade-up'>
           <p className={styles.tech_text}>Technologies that I worked with</p>
@@ -148,12 +145,21 @@ export default function Home() {
                 : <Image src='/logo/nodejs.png' alt='Node js' width={130} height={80} />
               }
               <Image src='/logo/react.png' alt='React' width={80} height={80} />
+              <Image src='/logo/git.png' alt='Git' width={80} height={80} />
               {(dark)
                 ? <Image src='/logo/google-cloud-white.png' alt='Google Cloud' width={280} height={80} />
-                : <Image src='/logo/google-cloud.png' alt='Google Cloud' width={280} height={80} />
+                : <Image src='/logo/google-cloud.png' alt='Google Cloud' width={300} height={80} />
               }
+              <div>
+              {(dark)
+                ? <Image src='/logo/docker-white.png' alt='Docker' width={280} height={80} />
+                : <Image src='/logo/docker-blue.png' alt='Docker' width={260} height={70} />
+              }
+              </div>
            </div>
         </div>
+
+
 
         {/* Project Section */}
         <div className={styles.project__container} id='project' >
@@ -228,14 +234,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* Skill Section */}
-        {/* <div className={styles.skill__container}>
-          <h1 className={styles.title}>Skill</h1>
-        </div> */}
+
 
         {/* Journey Section */}
         <div className={styles.journey__container} id='learning'>
@@ -293,25 +295,33 @@ export default function Home() {
                 <p className={styles.content_description}>AlgoExpert is an online platform that help Software Engineers prepare for technical interviews. It's also provide concept about Data Structures and Algorithm, System Design, and Machine Learning courses.</p>
                 <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.algoexpert.io/product' target='_blank' >AlgoExpert</a></span></p>
                 <div className={styles.content_split}>
-                  <ul className={styles.content_list}>
-                    <p className={styles.content_split_title}>Data Structures and Algorithms</p>
-                    <li>Big O Notation</li>
-                    <li>Graphs</li>
-                    <li>Heaps</li>
-                    <li>Stacks and Queues</li>
-                    <li>Hash Tables</li>
-                    <li>Dynamic Programming</li>
-                  </ul>
-                  <ul className={styles.content_list}>
-                    <p className={styles.content_split_title}>System Design</p>
-                    <li>Client-Server Model</li>
-                    <li>Networking</li>
-                    <li>Storage</li>
-                    <li>Latency and Throughput</li>
-                    <li>Proxies</li>
-                    <li>Load Balancers</li>
-                    <li>Pub/Sub</li>
-                  </ul>
+                  {/* <div className={styles.content_split_two_container}> */}
+                    {/* <div className={styles.content_split_two_title}>
+                      <p className={styles.content_split_title}>Data Structures and Algorithms</p>
+                      <p className={styles.content_split_title}>System Design</p>
+                    </div> */}
+                    <div className={styles.content_split_two_contents}>
+                      <ul className={styles.content_list_split}>
+                        <p className={styles.content_split_title}>Data Structures and Algorithms</p>
+                        <li>Big O Notation</li>
+                        <li>Graphs</li>
+                        <li>Heaps</li>
+                        <li>Stacks and Queues</li>
+                        <li>Hash Tables</li>
+                        <li>Dynamic Programming</li>
+                      </ul>
+                      <ul className={styles.content_list_split}>
+                        <p className={styles.content_split_title}>System Design</p>
+                        <li>Client-Server Model</li>
+                        <li>Networking</li>
+                        <li>Storage</li>
+                        <li>Latency and Throughput</li>
+                        <li>Proxies</li>
+                        <li>Load Balancers</li>
+                        <li>Pub/Sub</li>
+                      </ul>
+                    </div>
+                  {/* </div> */}
                 </div>
               </div>
             </div>
@@ -357,23 +367,27 @@ export default function Home() {
           </div> */}
         </div>
 
+
+
         {/* About me */}
-        <div className={styles.about_me__container} id='about me' data-aos='fade-up'>
-            <p className={styles.about_me__title}>About Me</p>
-            <p className={styles.about_me__description}>I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I’m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
+        <div className={styles.about_me__container} id='about me'>
+            <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
+            <p className={styles.about_me__description} data-aos='fade-up' >I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I’m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
             <br/>
-            <p className={styles.about_me__description}>On my previous job experience, I had been working on building an automated Telegram application to allow user to obtain their achievement points whenever they needed it right on their phone. The application had successfully reduce the waiting time for user to obtain the information. The result lead to an increase in sales due to the swift action that the user can take to increase their achievement points by purchasing more products. </p>
+            <p className={styles.about_me__description} data-aos='fade-up' >On my previous job experience, I had been working on building an automated Telegram application to allow user to obtain their achievement points whenever they needed it right on their phone. The application had successfully reduce the waiting time for user to obtain the information. The result lead to an increase in sales due to the swift action that the user can take to increase their achievement points by purchasing more products. </p>
             <br/>
-            <p className={styles.about_me__description}>Beside focusing on customer experience, I’m also developed an backend system for customer service executive to easily customerize the information that will display to user on the Telegram application. The application also collect user data to identify gap and opportunity for the company to make decision on increase sales and improve user experience. </p>
+            <p className={styles.about_me__description} data-aos='fade-up' >Beside focusing on customer experience, I’m also developed an backend system for customer service executive to easily customerize the information that will display to user on the Telegram application. The application also collect user data to identify gap and opportunity for the company to make decision on increase sales and improve user experience. </p>
             <br/>
-            <p className={styles.about_me__description}>I’m currently working on building mobile application using Flutter. I’m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I’m learning:</p>
-            <ol className={styles.about_me__description}>
+            <p className={styles.about_me__description} data-aos='fade-up' >I’m currently working on building mobile application using Flutter. I’m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I’m learning:</p>
+            <ol className={styles.about_me__description} data-aos='fade-up' >
               <li>Flutter</li>
               <li>Tensorflow</li>
             </ol>
         </div>
 
-        {/* Me Section */}
+
+
+        {/* Get In Touch Section */}
         <div className={styles.me__container} data-aos='fade-up'>
           <p className={styles.title}>Get In Touch</p>
           <div className={styles.message_container}>
@@ -381,7 +395,6 @@ export default function Home() {
             <Button variant='outlined' size='large' >Say Hello</Button>
           </div> 
         </div>
-
         {(width < 700)
           ? <div className={styles.footer_container}>
               <div className={styles.external_social_container}>
