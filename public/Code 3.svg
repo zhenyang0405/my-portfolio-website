@@ -1,0 +1,63 @@
+<svg width="504" height="384" viewBox="0 0 504 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Code">
+<rect id="terminal-background" width="504" height="384" rx="25" fill="#0C0E3D"/>
+<g id="options">
+<circle id="Ellipse 1" cx="29.5" cy="24.5" r="6.5" fill="#F95F5F"/>
+<circle id="Ellipse 2" cx="51.5" cy="24.5" r="6.5" fill="#FBE94D"/>
+<circle id="Ellipse 3" cx="73.5" cy="24.5" r="6.5" fill="#30DF76"/>
+</g>
+<g id="line-eleven">
+<rect id="Rectangle 27" x="159" y="333" width="60" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 29" x="20" y="333" width="120" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 33" x="231" y="333" width="211" height="17" rx="8.5" fill="#FE6F6F"/>
+</g>
+<g id="line-ten">
+<rect id="Rectangle 22" x="20" y="306" width="312" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 30" x="356" y="306" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+</g>
+<g id="line-nine">
+<rect id="Rectangle 24" x="20" y="279" width="257" height="17" rx="8.5" fill="#FE6F6F"/>
+<rect id="Rectangle 34" x="355" y="279" width="39" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 36" x="298" y="279" width="39" height="17" rx="8.5" fill="#13C2FA"/>
+</g>
+<g id="line-eight">
+<rect id="Rectangle 21" x="159" y="252" width="312" height="17" rx="8.5" fill="#FE6F6F"/>
+<rect id="Rectangle 26" x="89" y="252" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 31" x="20" y="252" width="60" height="17" rx="8.5" fill="#FBE94D"/>
+</g>
+<g id="line-seven">
+<rect id="Rectangle 20" x="20" y="225" width="312" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 25" x="340" y="225" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 32" x="413" y="225" width="39" height="17" rx="8.5" fill="#FBE94D"/>
+</g>
+<g id="line-six">
+<rect id="Rectangle 17" x="20" y="198" width="312" height="17" rx="8.5" fill="#FE6F6F"/>
+<rect id="Rectangle 19" x="385" y="198" width="82" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 18" x="336" y="198" width="39" height="17" rx="8.5" fill="#FBE94D"/>
+</g>
+<g id="line-five">
+<rect id="Rectangle 15" x="98" y="171" width="60" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 14" x="20" y="171" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 16" x="176" y="171" width="211" height="17" rx="8.5" fill="#FE6F6F"/>
+</g>
+<g id="line-four">
+<rect id="Rectangle 11" x="20" y="144" width="312" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 12" x="355" y="144" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+</g>
+<g id="line-three">
+<rect id="Rectangle 8" x="20" y="117" width="257" height="17" rx="8.5" fill="#FE6F6F"/>
+<rect id="Rectangle 10" x="355" y="117" width="39" height="17" rx="8.5" fill="#FBE94D"/>
+<rect id="Rectangle 9" x="297" y="117" width="39" height="17" rx="8.5" fill="#FBE94D"/>
+</g>
+<g id="line-two">
+<rect id="Rectangle 7" x="158" y="90" width="312" height="17" rx="8.5" fill="#FE6F6F"/>
+<rect id="Rectangle 6" x="86" y="90" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 5" x="18" y="90" width="60" height="17" rx="8.5" fill="#FBE94D"/>
+</g>
+<g id="line-one">
+<rect id="Rectangle 2" x="18" y="64" width="312" height="17" rx="8.5" fill="#FE6F6F"/>
+<rect id="Rectangle 3" x="339" y="64" width="60" height="17" rx="8.5" fill="#13C2FA"/>
+<rect id="Rectangle 4" x="412" y="64" width="39" height="17" rx="8.5" fill="#FBE94D"/>
+</g>
+</g>
+</svg>

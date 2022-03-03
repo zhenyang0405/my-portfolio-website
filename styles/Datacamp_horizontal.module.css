@@ -1,0 +1,31 @@
+.main_container {
+    min-width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    margin: 0;
+}
+
+.outer_horizontal__container {
+  width: 58vw;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  background-color: wheat;
+}
+
+.inner_horizontal__container {
+  display: flex;
+  width: 300vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  position: relative;
+}
+
+/* .journey_image {
+  margin-top: 100px;
+  position: absolute;
+  left: 100px;
+} */

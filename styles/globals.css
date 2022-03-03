@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background-color: var(--color-bg); */
 }
 
 a {
@@ -13,4 +14,40 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --color-bg: aliceblue;
+  --color-bg-secondary: #fffffe;
+  --color-bg-third: #fffffe;
+  --color-bg-offset: #fffffe;
+  --color-bg-border: #222;
+  --color-border: aliceblue;
+  --color-text: #272343;
+  --color-text-offset: #2d334a;
+  --color-primary: #222;
+  --color-secondary: #272343;
+  --github-logo: url('../public/GitHub-Mark-120px-plus.png');
+  --external_logo: url('../public/external-black.png');
+  --linkedin_logo: url('../public/logo/linkedin-black.png');
+  --theme-icon: url('../public/icons8-sun-90.png');
+}
+
+html[data-theme='dark'] {
+  --color-bg: #0A1929;
+  --color-bg-secondary: rgb(0, 30, 60);
+  --color-bg-third: #426e9c;
+  --color-bg-gradient: linear-gradient(rgb(10, 25, 41) 0%, rgb(0, 30, 60) 100%);
+  --color-bg-offset: #0A1929;
+  --color-bg-border: #020c1b;
+  --color-border: #64ffda;
+  --color-text: #fffffe;
+  --color-text-offset: #94a1b2;
+  --color-primary: #64ffda;
+  --color-secondary: #64ffda;
+  /* --color-primary: rgb(128, 134, 46); */
+  --github-logo: url('../public/GitHub-Mark-Light-120px-plus.png');
+  --external_logo: url('../public/external-white.png');
+  --linkedin_logo: url('../public/logo/linkedin-white.png');
+  --theme-icon: url('../public/icons8-moon-and-stars-96.png');
 }
