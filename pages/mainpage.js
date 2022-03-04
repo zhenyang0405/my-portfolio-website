@@ -50,30 +50,6 @@ const Mainpage = () => {
   // const { height, width } = useWindowDimensions();
 
 
-  const [windowDimensions, setWindowDimensions] = useState({width: window.innerWidth, height: window.innerHeight});
-
-  useEffect(() => {
-      if (typeof window !== 'undefined') {
-          const getWindowDimensions = () => {
-              const { innerWidth: width, innerHeight: height } = window;
-              setWindowDimensions({
-                  width: width,
-                  height: height
-              })
-          }
-      }
-
-      const handleResize = () => {
-          getWindowDimensions();
-      }
-
-      window.addEventListener('resize', handleResize);
-      return () => {
-          window.removeEventListener('resize', handleResize)
-      }
-  }, []);
-
-
   const toggleTab = (idx) => {
     setToggleTabIndex(idx);
   }
@@ -106,15 +82,15 @@ const Mainpage = () => {
                     : <a href='#home'><Image src='/logo/symbol-black.png' alt='symbol' width={30} height={30} /></a>
                 }
                 </div>
-                {(windowDimensions.width < 700)
-                ? ''
-                : <div className={styles.main_menu_container}>
-                    <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='300' >01 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#project'>Project</a></span></p>
-                    <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='500' >02 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#learning' >Learning</a></span></p>
-                    <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='700' >03 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#about me'>About Me</a></span></p>
-                    </div>
+                {/* {(windowDimensions.width < 700)
+                ? '' */}
+                <div className={styles.main_menu_container}>
+                  <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='300' >01 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#project'>Project</a></span></p>
+                  <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='500' >02 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#learning' >Learning</a></span></p>
+                  <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='700' >03 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#about me'>About Me</a></span></p>
+                </div>
 
-                }
+                
             </div>
             <div className={styles.top_right}>
                 <div className={styles.menu_container}>
@@ -132,24 +108,25 @@ const Mainpage = () => {
         <div className={styles.my__container}>
             <div className={styles.my_name__container}>
             <div className={styles.my_name__left}>
-                {(windowDimensions.width < 1100)
-                ? <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
-                : <>
-                    <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my</p>
-                    <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' >name is <span className={styles.name}>Zhen Yang</span>.</p>
-                    </>
-                } 
-                {/* <p className={styles.my_intro}>Hi, my</p> */}
-                {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
-                <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
-                <div data-aos='fade-right' data-aos-delay='1700' >
-                {(dark)
-                    ? <ButtonDark>Resume</ButtonDark>
-                    : <ButtonLight>Resume</ButtonLight>
-                }
-                </div>
+              <div className={styles.my_intro_container_one}>
+                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
+              </div>
+              <div className={styles.my_intro_container_two}>
+                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my</p>
+                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' >name is <span className={styles.name}>Zhen Yang</span>.</p>
+              </div>
+              
+              {/* <p className={styles.my_intro}>Hi, my</p> */}
+              {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
+              <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+              <div data-aos='fade-right' data-aos-delay='1700' >
+              {(dark)
+                  ? <ButtonDark>Resume</ButtonDark>
+                  : <ButtonLight>Resume</ButtonLight>
+              }
+              </div>
             </div>
-            {(windowDimensions.width < 700) 
+            {/* {(windowDimensions.width < 700) 
                 ? ''
                 : <>
                     <div className={styles.external_container}>
@@ -162,7 +139,7 @@ const Mainpage = () => {
                     <div className={styles.email_after} data-aos='fade-up' data-aos-delay='2900' ></div>
                     </div>
                 </>
-            }
+            } */}
             </div>
             <div className={styles.my_photo__container} data-aos='fade-left' data-aos-delay='1900'>
             <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} layout='responsive' />
@@ -407,28 +384,41 @@ const Mainpage = () => {
             }
         </div> 
         </div>
-        {(windowDimensions.width < 700)
-        ? <div className={styles.footer_container}>
-            <div className={styles.external_social_container}>
-                <p className={styles.external_logo_social}>
-                {(dark)
-                  ? <>
-                      <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                      <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo_white}></div></a>
-                    </>
-                  : <>
-                      <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                      <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo}></div></a>
-                    </>
-                }
-                </p>
-                <div className={styles.external_social_email_container}>
-                <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank'rel='noopener noreferrer' ><p className={styles.email_social}>zhenyang.chong0405@gmail.com</p></a>
-                </div>
+
+
+                
+        <div className={styles.social_media_container}>
+          <div className={styles.external_container}>
+            <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer' ><div className={`${styles.github_logo} ${styles.external_link_one}`} data-aos='fade-up' data-aos-delay='2100' ></div></a>
+            <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={`${styles.linkedin_logo} ${styles.external_link_two}`} data-aos='fade-up' data-aos-delay='2300' ></div></a>
+            <div className={styles.external_after} data-aos='fade-up' data-aos-delay='2500'></div>
+          </div>
+          <div className={styles.email_container}>
+            <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><span className={styles.email} data-aos='fade-up' data-aos-delay='2700' >zhenyang.chong0405@gmail.com</span></a>
+            <div className={styles.email_after} data-aos='fade-up' data-aos-delay='2900' ></div>
+          </div>
+        </div>
+        
+        <div className={styles.footer_container}>
+          <div className={styles.external_social_container}>
+            <p className={styles.external_logo_social}>
+            {(dark)
+              ? <>
+                  <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                  <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo_white}></div></a>
+                </>
+              : <>
+                  <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
+                  <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo}></div></a>
+                </>
+            }
+            </p>
+            <div className={styles.external_social_email_container}>
+              <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank'rel='noopener noreferrer' ><p className={styles.email_social}>zhenyang.chong0405@gmail.com</p></a>
             </div>
-            </div>
-        : ''
-        }
+          </div>
+        </div>
+
     </main>
   )
 }
