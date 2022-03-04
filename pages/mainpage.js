@@ -104,7 +104,12 @@ const Mainpage = () => {
               
               {/* <p className={styles.my_intro}>Hi, my</p> */}
               {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
-              <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+              <div className={styles.short_intro_container_one}>
+                <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+              </div>
+              <div className={styles.short_intro_container_two}>
+                <p className={styles.my_intro_short} data-aos='fade-right' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+              </div>
               
               {/* Screen size > 700 */}
               <div data-aos='fade-right' data-aos-delay='1700' className={styles.resume_button_container_one} >
@@ -363,14 +368,14 @@ const Mainpage = () => {
 
         {/* Get In Touch Section */}
         <div className={styles.me__container} data-aos='fade-up'>
-        <p className={styles.title}>Get In Touch</p>
-        <div className={styles.message_container}>
-            <p className={styles.message_description}>I&apos;m currently looking for opportunity where I can put my abilities to work for a mission I&apos;m passionate about. I&apos;m happy to connect with you, who share the same passion as me. </p>
-            {(dark)
-            ? <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonDark>Hire Me</ButtonDark></a>
-            : <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonLight>Hire Me</ButtonLight></a>
-            }
-        </div> 
+          <p className={styles.title}>Get In Touch</p>
+          <div className={styles.message_container}>
+              <p className={styles.message_description}>I&apos;m currently looking for opportunity where I can put my abilities to work for a mission I&apos;m passionate about. I&apos;m happy to connect with you, who share the same passion as me. </p>
+              {(dark)
+              ? <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonDark>Hire Me</ButtonDark></a>
+              : <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonLight>Hire Me</ButtonLight></a>
+              }
+          </div> 
         </div>
 
 

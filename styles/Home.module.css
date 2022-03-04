@@ -168,9 +168,17 @@
   font-size: 4rem;
   color: var(--color-primary);
   line-height: 0.2;
-  font-family: loretta, serif;
+  font-family: loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
+}
+
+.short_intro_container_one {
+  display: block;
+}
+
+.short_intro_container_two {
+  display: none;
 }
 
 .name {
@@ -1005,11 +1013,11 @@ div.linkedin_logo {
   }
 
   .my_photo__container {
-    width: 300px;
+    width: 250px;
     display: block;
     position: relative;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 0;
     right: 0;
     top: 5%;
     filter: drop-shadow(5px 5px 10px #222);
@@ -1155,7 +1163,7 @@ div.linkedin_logo {
   }
 
   /*********** Get In Touch **************/
-  
+
   .title {
     font-size: 2.5rem;
   }
@@ -1222,7 +1230,7 @@ div.linkedin_logo {
     display: block;
     position: relative;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 0;
     right: 0;
     top: 5%;
     filter: drop-shadow(5px 5px 10px #222);
@@ -1235,6 +1243,14 @@ div.linkedin_logo {
     font-family: loretta, serif;
     font-style: normal;
     font-weight: 300;
+  }
+
+  .short_intro_container_one {
+    display: none;
+  }
+  
+  .short_intro_container_two {
+    display: block;
   }
   
   .name {
