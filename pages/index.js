@@ -15,6 +15,7 @@ const ButtonLight = styled.button`
   padding: 0.5em 1em;
   border: 2px solid midnightblue;
   font-size: 1.2rem;
+  cursor: pointer;
 
   &:hover {
     background: aliceblue;
@@ -29,6 +30,7 @@ const ButtonDark = styled.button`
   padding: 0.5em 1em;
   border: 2px solid #64ffda;
   font-size: 1.2rem;
+  cursor: pointer;
 
   &:hover {
     background: #0A1929;
@@ -82,32 +84,30 @@ export default function Home() {
           <link rel="icon" href="/me-circle.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={styles.main} id='home'>
           {/* Intro Section */}
           <div className={styles.intro__container}>
             <div className={styles.top_bar}>
                 <div className={styles.top_left}>
-                  <div className={styles.main_symbol}>
+                  <div className={styles.main_symbol} data-aos='fade-down' data-aos-delay='100' >
                     {(dark)
-                      ? <Image src='/logo/symbol-green.png' alt='symbol' width={30} height={30} />
-                      : <Image src='/logo/symbol-black.png' alt='symbol' width={30} height={30} />
+                      ? <a href='#home'><Image src='/logo/symbol-green.png' alt='symbol' width={30} height={30} /></a>
+                      : <a href='#home'><Image src='/logo/symbol-black.png' alt='symbol' width={30} height={30} /></a>
                     }
                   </div>
                   {(width < 700)
-                    ? <div className={styles.main_menu_container}>
-                        <p className={styles.menu_items}>Menu</p>
-                      </div>
+                    ? ''
                     : <div className={styles.main_menu_container}>
-                        <p className={styles.menu_items}><a href='#project'>01 &nbsp;&nbsp;<span className={styles.menu_option}>Project</span></a></p>
-                        <p className={styles.menu_items}>02 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#learning' >Learning</a></span></p>
-                        <p className={styles.menu_items}>03 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#about me'>About Me</a></span></p>
+                        <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='300' >01 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#project'>Project</a></span></p>
+                        <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='500' >02 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#learning' >Learning</a></span></p>
+                        <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='700' >03 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#about me'>About Me</a></span></p>
                       </div>
 
                   }
                 </div>
                 <div className={styles.top_right}>
                   <div className={styles.menu_container}>
-                    <div className={styles.theme_option}>
+                    <div className={styles.theme_option} data-aos='fade-down' data-aos-delay='900'>
                       {(dark) 
                         ? <Image src='/logo/moon-green.png' alt='Moon' width={30} height={30} onClick={() => toggleTheme(false)} />
                         : <Image src='/icons8-sun-90.png' alt='Sun' width={30} height={30} onClick={() => toggleTheme(true)} />
@@ -124,39 +124,36 @@ export default function Home() {
                   {(width < 1100)
                     ? <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
                     : <>
-                        <p className={styles.my_intro}>Hi, my</p>
-                        <p className={styles.my_intro}>name is <span className={styles.name}>Zhen Yang</span>.</p>
+                        <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my</p>
+                        <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' >name is <span className={styles.name}>Zhen Yang</span>.</p>
                       </>
                   } 
                   {/* <p className={styles.my_intro}>Hi, my</p> */}
                   {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
-                  <p className={styles.my_intro_short}>I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
-                  {/* <Button variant='outlined' size='large' style={{
-                      backgroundColor: buttonColor,
-                      color: textButtonColor,
-                    }} >Resume
-                  </Button> */}
-                  {(dark)
-                    ? <ButtonDark>Resume</ButtonDark>
-                    : <ButtonLight>Resume</ButtonLight>
-                  }
+                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+                  <div data-aos='fade-right' data-aos-delay='1700' >
+                    {(dark)
+                      ? <ButtonDark>Resume</ButtonDark>
+                      : <ButtonLight>Resume</ButtonLight>
+                    }
+                  </div>
                 </div>
                 {(width < 700) 
                   ? ''
                   : <>
                       <div className={styles.external_container}>
-                        <a href='https://github.com/zhenyang0405' target='_blank'><div className={`${styles.github_logo} ${styles.external_link_one}`}></div></a>
-                        <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank'><div className={`${styles.linkedin_logo} ${styles.external_link_two}`}></div></a>
-                        <div className={styles.external_after}></div>
+                        <a href='https://github.com/zhenyang0405' target='_blank'><div className={`${styles.github_logo} ${styles.external_link_one}`} data-aos='fade-up' data-aos-delay='2100' ></div></a>
+                        <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank'><div className={`${styles.linkedin_logo} ${styles.external_link_two}`} data-aos='fade-up' data-aos-delay='2300' ></div></a>
+                        <div className={styles.external_after} data-aos='fade-up' data-aos-delay='2500'></div>
                       </div>
                       <div className={styles.email_container}>
-                        <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><span className={styles.email}>zhenyang.chong0405@gmail.com</span></a>
-                        <div className={styles.email_after}></div>
+                        <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><span className={styles.email} data-aos='fade-up' data-aos-delay='2700' >zhenyang.chong0405@gmail.com</span></a>
+                        <div className={styles.email_after} data-aos='fade-up' data-aos-delay='2900' ></div>
                       </div>
                     </>
                 }
               </div>
-              <div className={styles.my_photo__container}>
+              <div className={styles.my_photo__container} data-aos='fade-left' data-aos-delay='1900'>
                 <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} layout='responsive' />
                 {/* <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} /> */}
               </div>
@@ -415,9 +412,9 @@ export default function Home() {
               <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
               <p className={styles.about_me__description} data-aos='fade-up' >I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I’m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
               <br/>
-              <p className={styles.about_me__description} data-aos='fade-up' >On my previous job experience, I had been working on building an automated Telegram application to allow user to obtain their achievement points whenever they needed it right on their phone. The application had successfully reduce the waiting time for user to obtain the information. The result lead to an increase in sales due to the swift action that the user can take to increase their achievement points by purchasing more products. </p>
+              <p className={styles.about_me__description} data-aos='fade-up' >On my previous job experience, I had been working on building an automated Telegram application to allow user to obtain their achievement points whenever they needed it right on their phone. The application had successfully <strong className={styles.highlight_text}>reduce the waiting time</strong> for user to obtain the information. The result lead to an <strong className={styles.highlight_text}>increase in sales</strong> due to the swift action that the user can take to increase their achievement points by purchasing more products. </p>
               <br/>
-              <p className={styles.about_me__description} data-aos='fade-up' >Beside focusing on customer experience, I’m also developed an backend system for customer service executive to easily customerize the information that will display to user on the Telegram application. The application also collect user data to identify gap and opportunity for the company to make decision on increase sales and improve user experience. </p>
+              <p className={styles.about_me__description} data-aos='fade-up' >Beside focusing on customer experience, I’m also developed an backend system for customer service executive to easily <strong className={styles.highlight_text}>customerize the information</strong> that will display to user on the Telegram application. The application also collect user data to <strong className={styles.highlight_text}>identify gap and opportunity</strong> for the company to make decision on increase sales and improve user experience. </p>
               <br/>
               <p className={styles.about_me__description} data-aos='fade-up' >I’m currently working on building mobile application using Flutter. I’m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I’m learning:</p>
               <ol className={styles.about_me__description} data-aos='fade-up' >
@@ -432,10 +429,10 @@ export default function Home() {
           <div className={styles.me__container} data-aos='fade-up'>
             <p className={styles.title}>Get In Touch</p>
             <div className={styles.message_container}>
-              <p className={styles.message_description}>I’m currently looking for new opportunities to be part of next big things. I’m also happy to connect with you. Whether you have a question or just want to say hi, please drop me a message. </p>
+              <p className={styles.message_description}>I’m currently looking for opportunity where I can put my abilities to work for a mission I’m passionate about. I’m happy to connect with you, who share the same passion as me. </p>
               {(dark)
-                ? <ButtonDark>Hire Me</ButtonDark>
-                : <ButtonLight>Hire Me</ButtonLight>
+                ? <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><ButtonDark>Hire Me</ButtonDark></a>
+                : <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><ButtonLight>Hire Me</ButtonLight></a>
               }
             </div> 
           </div>
@@ -443,8 +440,8 @@ export default function Home() {
             ? <div className={styles.footer_container}>
                 <div className={styles.external_social_container}>
                   <p className={styles.external_logo_social}>
-                    <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank'><div className={styles.github_logo}></div></a>
-                    <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank'><div className={styles.external_logo}></div></a>
+                    <a href='https://github.com/zhenyang0405' target='_blank'><div className={styles.github_logo_white}></div></a>
+                    <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank'><div className={styles.linkedin_logo_white}></div></a>
                   </p>
                   <div className={styles.external_social_email_container}>
                     <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><p className={styles.email_social}>zhenyang.chong0405@gmail.com</p></a>

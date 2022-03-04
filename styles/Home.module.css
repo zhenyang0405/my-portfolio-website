@@ -39,6 +39,7 @@
 
 .main_symbol {
   margin-top: 28px;
+  margin-left: 15px;
 }
 
 .main_menu_container {
@@ -83,8 +84,9 @@
 }
 
 .theme_option {
-  margin-right: 30px;
+  margin-right: 15px;
   margin-top: 25px;
+  cursor: pointer;
 }
 
 .menu_container {
@@ -98,10 +100,11 @@
 .menu_items {
   margin: auto 0;
   font-weight: 500;
-  color: var(--color-secondary);
+  color: var(--color-text);
 }
 
-.menu_option {
+.menu_option a {
+  color: var(--color-primary);
   font-weight: 300; 
   transition: 0.3s;
 }
@@ -143,6 +146,7 @@
 .job {
   font-weight: 500;
   cursor: pointer;
+  color: var(--color-primary)
 }
 
 .external_link_one {
@@ -372,6 +376,13 @@ div.external_logo {
   content: var(--external_logo);
 }
 
+div.linkedin_logo_white {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  content: url('../public/logo/linkedin-white.png');
+}
+
 div.linkedin_logo {
   margin: 0;
   width: 25px;
@@ -424,12 +435,12 @@ div.linkedin_logo {
   border: none;
   background: none;
   cursor: pointer;
-  border-left: 0.5rem solid var(--color-bg-border);
+  border-left: 0.5rem solid var(--color-border);
   color: var(--color-text);
 }
 
 .active_btn {
-  border-left: 0.5rem solid var(--color-primary);
+  border-left: 0.5rem solid var(--color-bg-border);
   transition: all 0.3s ease;
   /* background: #03ef62; */
 }
@@ -677,6 +688,10 @@ div.linkedin_logo {
   color: var(--color-text);
 }
 
+.highlight_text {
+  color: var(--color-primary);
+}
+
 /* .about_me__description_one {
   line-height: 1.5;
   font-size: 1.5rem;
@@ -716,7 +731,7 @@ div.linkedin_logo {
 }
 
 .message_container {
-  max-width: 750px;
+  max-width: 700px;
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -1220,7 +1235,7 @@ div.linkedin_logo {
   /************* Footer **************/
 
   .footer_container {
-    background-color: white;
+    background-color: var(--color-bg-secondary);
   }
 
   .external_social_container {
@@ -1245,6 +1260,7 @@ div.linkedin_logo {
     text-align: center;
     margin: 0 auto;
     padding-bottom: 50px;
+    color: var(--color-text)
   }
 }
 

@@ -39,13 +39,12 @@ html[data-theme='dark'] {
   --color-bg-third: #426e9c;
   --color-bg-gradient: linear-gradient(rgb(10, 25, 41) 0%, rgb(0, 30, 60) 100%);
   --color-bg-offset: #0A1929;
-  --color-bg-border: #020c1b;
-  --color-border: #64ffda;
+  --color-bg-border: #64ffda;
+  --color-border: #020c1b;
   --color-text: #fffffe;
   --color-text-offset: #adbed4;
   --color-primary: #64ffda;
   --color-secondary: #64ffda;
-  /* --color-primary: rgb(128, 134, 46); */
   --github-logo: url('../public/logo/github-green.png');
   --external_logo: url('../public/external-white.png');
   --linkedin_logo: url('../public/logo/linkedin-green.png');
