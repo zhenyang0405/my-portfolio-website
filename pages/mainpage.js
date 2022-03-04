@@ -177,86 +177,86 @@ const Mainpage = () => {
 
         {/* Project Section */}
         <div className={styles.project__container} id='project' >
-        <p className={styles.project_header} data-aos='fade-up'>Something that I&apos;ve build</p>
-        <div className={styles.features_project__container}>
-            <div className={styles.project}  data-aos='fade-up'>
-            <Image src='/spotify-web-player.png' alt='Spotify Web Player' width={1000} height={650} />
-            <div className={styles.project_text__container}>
-                <p className={styles.project_title}>Spotify Web Player</p>
-                <div className={styles.project_title__container}>
-                <p className={styles.project_text}>
-                    A web-based music player that you can listen to music on any devices. Play your favourite music from your recently played history. Search new song, album, artist, and playlist. View your top artists and tracks, and listen music from your saved playlists.
-                </p>
-                </div>
-                <p className={styles.project_tech_list}>
-                <span className={styles.tech}><a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>React</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://reactrouter.com/' target='_blank' rel='noopener noreferrer'>React Router</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://developer.spotify.com/' target='_blank' rel='noopener noreferrer'>Spotify API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://expressjs.com/' target='_blank' rel='noopener noreferrer'>Express</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://axios-http.com/' target='_blank' rel='noopener noreferrer'>Axios</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://www.heroku.com/' target='_blank' rel='noopener noreferrer'>Heroku</a></span>
-                </p>
-                <p className={styles.extra_logo_container}>
-                {(dark)
-                    ? <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                    : <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                }
-                <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank' rel='noopener noreferrer'><div className={styles.external_logo}></div></a>
-                </p>
-            </div>
-            </div>
-            <div className={styles.project} data-aos='fade-up'>
-            <Image src='/moment-web-scraping.png' alt='Moment Web Scraping' width={1000} height={650} />
-            <div className={styles.project_text__container}>
-                {/* <p className={styles.features}>Featured Project</p> */}
-                <p className={styles.project_title}>Web Scraping</p>
-                <div className={styles.project_title__container}>
-                <p className={styles.project_text}>
-                    Automating Web Scraping using Cloud Run. A program that will get the price of camera every single day and notify user through Telegram. User is allowed to ask questions and able to receive automated response directly from Telegram’s bot, which is handled using Cloud Functions.
-                </p>
-                </div>
-                <p className={styles.project_tech_list}>
-                <span className={styles.tech}><a href='https://www.python.org/' target='_blank' rel='noopener noreferrer'>Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://www.selenium.dev/' target='_blank' rel='noopener noreferrer'>Selenium</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://docs.python-requests.org/en/latest/' target='_blank' rel='noopener noreferrer'>Requests</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://core.telegram.org/' target='_blank' rel='noopener noreferrer'>Telegram API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://cloud.google.com/run' target='_blank' rel='noopener noreferrer'>Cloud Run</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://cloud.google.com/functions' target='_blank' rel='noopener noreferrer'>Cloud Function</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-                <p className={styles.extra_logo_container}>
-                {(dark)
-                    ? <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                    : <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                }
-                </p>
-            </div>
-            
-            </div>
-            <div className={styles.project} data-aos='fade-up'>
-            <Image src='/sudoku.png' alt='Sudoku Game' width={1000} height={650} />
-            <div className={styles.project_text__container}>
-                {/* <p className={styles.features}>Featured Project</p> */}
-                <p className={styles.project_title}>Sudoku Game & Solver</p>
-                <div className={styles.project_title__container}>
-                
-                <p className={styles.project_text}>
-                    A simple Sudoku game and solver that was build using Python. User can play the game, or the Sudoku can solve by itself using backtracking algorithm. An application to demonstrate how recursive work in programming.
-                </p>
-                </div>
-                <p className={styles.project_tech_list}>
-                <span className={styles.tech}><a href='https://www.python.org/' target='_blank' rel='noopener noreferrer'>Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://github.com/pygame/pygame' target='_blank' rel='noopener noreferrer'>Pygame</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://pipenv.pypa.io/en/latest/' target='_blank' rel='noopener noreferrer'>Pipenv</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-                <p className={styles.extra_logo_container}>
-                {(dark)
-                    ? <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                    : <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                }
-                </p>
-            </div>
-            </div>
-        </div>
+          <p className={styles.project_header} data-aos='fade-up'>Something that I&apos;ve build</p>
+          <div className={styles.features_project__container}>
+              <div className={styles.project}  data-aos='fade-up'>
+              <Image src='/spotify-web-player.png' alt='Spotify Web Player' width={1000} height={650} />
+              <div className={styles.project_text__container}>
+                  <p className={styles.project_title}>Spotify Web Player</p>
+                  <div className={styles.project_title__container}>
+                  <p className={styles.project_text}>
+                      A web-based music player that you can listen to music on any devices. Play your favourite music from your recently played history. Search new song, album, artist, and playlist. View your top artists and tracks, and listen music from your saved playlists.
+                  </p>
+                  </div>
+                  <p className={styles.project_tech_list}>
+                  <span className={styles.tech}><a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>React</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://reactrouter.com/' target='_blank' rel='noopener noreferrer'>React Router</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://developer.spotify.com/' target='_blank' rel='noopener noreferrer'>Spotify API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://expressjs.com/' target='_blank' rel='noopener noreferrer'>Express</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://axios-http.com/' target='_blank' rel='noopener noreferrer'>Axios</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://www.heroku.com/' target='_blank' rel='noopener noreferrer'>Heroku</a></span>
+                  </p>
+                  <p className={styles.extra_logo_container}>
+                  {(dark)
+                      ? <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                      : <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
+                  }
+                  <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank' rel='noopener noreferrer'><div className={styles.external_logo}></div></a>
+                  </p>
+              </div>
+              </div>
+              <div className={styles.project} data-aos='fade-up'>
+              <Image src='/moment-web-scraping.png' alt='Moment Web Scraping' width={1000} height={650} />
+              <div className={styles.project_text__container}>
+                  {/* <p className={styles.features}>Featured Project</p> */}
+                  <p className={styles.project_title}>Web Scraping</p>
+                  <div className={styles.project_title__container}>
+                  <p className={styles.project_text}>
+                      Automating Web Scraping using Cloud Run. A program that will get the price of camera every single day and notify user through Telegram. User is allowed to ask questions and able to receive automated response directly from Telegram’s bot, which is handled using Cloud Functions.
+                  </p>
+                  </div>
+                  <p className={styles.project_tech_list}>
+                  <span className={styles.tech}><a href='https://www.python.org/' target='_blank' rel='noopener noreferrer'>Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://www.selenium.dev/' target='_blank' rel='noopener noreferrer'>Selenium</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://docs.python-requests.org/en/latest/' target='_blank' rel='noopener noreferrer'>Requests</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://core.telegram.org/' target='_blank' rel='noopener noreferrer'>Telegram API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://cloud.google.com/run' target='_blank' rel='noopener noreferrer'>Cloud Run</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://cloud.google.com/functions' target='_blank' rel='noopener noreferrer'>Cloud Function</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  </p>
+                  <p className={styles.extra_logo_container}>
+                  {(dark)
+                      ? <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                      : <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
+                  }
+                  </p>
+              </div>
+              
+              </div>
+              <div className={styles.project} data-aos='fade-up'>
+              <Image src='/sudoku.png' alt='Sudoku Game' width={1000} height={650} />
+              <div className={styles.project_text__container}>
+                  {/* <p className={styles.features}>Featured Project</p> */}
+                  <p className={styles.project_title}>Sudoku Game & Solver</p>
+                  <div className={styles.project_title__container}>
+                  
+                  <p className={styles.project_text}>
+                      A simple Sudoku game and solver that was build using Python. User can play the game, or the Sudoku can solve by itself using backtracking algorithm. An application to demonstrate how recursive work in programming.
+                  </p>
+                  </div>
+                  <p className={styles.project_tech_list}>
+                  <span className={styles.tech}><a href='https://www.python.org/' target='_blank' rel='noopener noreferrer'>Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://github.com/pygame/pygame' target='_blank' rel='noopener noreferrer'>Pygame</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={styles.tech}><a href='https://pipenv.pypa.io/en/latest/' target='_blank' rel='noopener noreferrer'>Pipenv</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                  </p>
+                  <p className={styles.extra_logo_container}>
+                  {(dark)
+                      ? <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                      : <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
+                  }
+                  </p>
+              </div>
+              </div>
+          </div>
         </div>
 
 
@@ -348,45 +348,6 @@ const Mainpage = () => {
             </div>
             </div>
         </div>
-
-        {/* <div className={styles.learning_container} data-aos='fade-up'>
-            <Link href='/datacamp'>
-            <a>
-                <div className={styles.datacamp_back}>
-                <div className={styles.datacamp_front}>
-                    <p className={styles.source_title}>DataCamp</p>
-                </div>
-                </div>
-            </a>
-            </Link>
-            <Link href='/realpython'>
-            <a>
-                <div className={styles.realpython_back}>
-                <div className={styles.realpython_front}>
-                    <p className={styles.source_title}>RealPython</p>
-                </div>
-                </div>
-            </a>
-            </Link>
-            <Link href='/codecademy'>
-            <a>
-                <div className={styles.codecademy_back}>
-                <div className={styles.codecademy_front}>
-                    <p className={styles.source_title}>Codecademy</p>
-                </div>
-                </div>
-            </a>
-            </Link>
-            <Link href='/algoexpert'>
-            <a>
-                <div className={styles.algoexpert_back}>
-                <div className={styles.algoexpert_front}>
-                    <p className={styles.source_title}>AlgoExpert</p>
-                </div>
-                </div>
-            </a>
-            </Link>
-        </div> */}
         </div>
 
 
