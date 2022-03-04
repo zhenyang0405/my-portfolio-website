@@ -5,8 +5,6 @@ import 'animate.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import styled from 'styled-components'
-// import dynamic from 'next/dynamic'
-// import useWindowDimensions from '../functions/custom-hook'
 
 const ButtonLight = styled.button`
   background: midnightblue;
@@ -38,17 +36,10 @@ const ButtonDark = styled.button`
   }
 `;
 
-// const useDynamicWindowDimensions = dynamic(() => 
-//   import('../functions/custom-hook'),
-//   {ssr: false}
-// );
-
 const Mainpage = () => {
 
   const [dark, setDark] = useState(false);
   const [toggleTabIndex, setToggleTabIndex] = useState(1);
-  // const { height, width } = useWindowDimensions();
-
 
   const toggleTab = (idx) => {
     setToggleTabIndex(idx);
@@ -82,15 +73,11 @@ const Mainpage = () => {
                     : <a href='#home'><Image src='/logo/symbol-black.png' alt='symbol' width={30} height={30} /></a>
                 }
                 </div>
-                {/* {(windowDimensions.width < 700)
-                ? '' */}
                 <div className={styles.main_menu_container}>
                   <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='300' >01 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#project'>Project</a></span></p>
                   <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='500' >02 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#learning' >Learning</a></span></p>
                   <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='700' >03 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#about me'>About Me</a></span></p>
                 </div>
-
-                
             </div>
             <div className={styles.top_right}>
                 <div className={styles.menu_container}>
@@ -99,7 +86,6 @@ const Mainpage = () => {
                     ? <Image src='/logo/moon-green.png' alt='Moon' width={30} height={30} onClick={() => toggleTheme(false)} />
                     : <Image src='/icons8-sun-90.png' alt='Sun' width={30} height={30} onClick={() => toggleTheme(true)} />
                     }
-                    
                 </div>
                 
                 </div>
@@ -112,38 +98,32 @@ const Mainpage = () => {
                 <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
               </div>
               <div className={styles.my_intro_container_two}>
-                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my</p>
-                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' >name is <span className={styles.name}>Zhen Yang</span>.</p>
+                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is</p>
+                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' ><span className={styles.name}>Zhen Yang</span>.</p>
               </div>
               
               {/* <p className={styles.my_intro}>Hi, my</p> */}
               {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
               <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
-              <div data-aos='fade-right' data-aos-delay='1700' >
-              {(dark)
-                  ? <ButtonDark>Resume</ButtonDark>
-                  : <ButtonLight>Resume</ButtonLight>
-              }
+              
+              {/* Screen size > 700 */}
+              <div data-aos='fade-right' data-aos-delay='1700' className={styles.resume_button_container_one} >
+                {(dark)
+                    ? <ButtonDark className={styles.resume_button}>Resume</ButtonDark>
+                    : <ButtonLight className={styles.resume_button}>Resume</ButtonLight>
+                }
+              </div>
+              {/* Screen size <= 700 */}
+              <div data-aos='fade-right' className={styles.resume_button_container_two} >
+                {(dark)
+                    ? <ButtonDark className={styles.resume_button}>Resume</ButtonDark>
+                    : <ButtonLight className={styles.resume_button}>Resume</ButtonLight>
+                }
               </div>
             </div>
-            {/* {(windowDimensions.width < 700) 
-                ? ''
-                : <>
-                    <div className={styles.external_container}>
-                    <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer' ><div className={`${styles.github_logo} ${styles.external_link_one}`} data-aos='fade-up' data-aos-delay='2100' ></div></a>
-                    <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={`${styles.linkedin_logo} ${styles.external_link_two}`} data-aos='fade-up' data-aos-delay='2300' ></div></a>
-                    <div className={styles.external_after} data-aos='fade-up' data-aos-delay='2500'></div>
-                    </div>
-                    <div className={styles.email_container}>
-                    <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><span className={styles.email} data-aos='fade-up' data-aos-delay='2700' >zhenyang.chong0405@gmail.com</span></a>
-                    <div className={styles.email_after} data-aos='fade-up' data-aos-delay='2900' ></div>
-                    </div>
-                </>
-            } */}
             </div>
             <div className={styles.my_photo__container} data-aos='fade-left' data-aos-delay='1900'>
-            <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} layout='responsive' />
-            {/* <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} /> */}
+              <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} layout='responsive' />
             </div>
         </div>
         </div>
@@ -152,28 +132,36 @@ const Mainpage = () => {
 
         {/* Technologies Section */}
         <div className={styles.technologies_container} data-aos='fade-up'>
-        <p className={styles.tech_text}>Technologies that I worked with</p>
-        <div className={styles.technologies_bar}>
-            <Image src='/logo/python.png' alt='Python' width={80} height={80}  />
-            <Image src='/logo/javascript.png' alt='Javascript' width={80} height={80} />
-            {(dark)
+          <p className={styles.tech_text}>Technologies that I worked with</p>
+          <div className={styles.technologies_bar}>
+            <div className={styles.tech_bar_img}>
+              <Image src='/logo/python.png' alt='Python' width={80} height={80}  />
+            </div>
+            <div className={styles.tech_bar_img}>
+              <Image src='/logo/javascript.png' alt='Javascript' width={80} height={80} />
+            </div>
+            <div className={styles.tech_bar_img_medium}>
+              {(dark)
                 ? <Image src='/logo/nodejs-white.png' alt='Node js' width={130} height={80} />
                 : <Image src='/logo/nodejs.png' alt='Node js' width={130} height={80} />
-            }
-            <Image src='/logo/react.png' alt='React' width={80} height={80} />
-            <Image src='/logo/git.png' alt='Git' width={80} height={80} />
-            {(dark)
+              }
+            </div>
+            <div className={styles.tech_bar_img}>
+              <Image src='/logo/react.png' alt='React' width={80} height={80} />
+            </div>
+            <div className={styles.tech_bar_img}>
+              <Image src='/logo/git.png' alt='Git' width={80} height={80} />
+            </div>
+            <div className={styles.tech_bar_img_long}>
+              {(dark)
                 ? <Image src='/logo/google-cloud-white.png' alt='Google Cloud' width={280} height={80} />
                 : <Image src='/logo/google-cloud.png' alt='Google Cloud' width={300} height={80} />
-            }
-            <div>
-            <Image src='/logo/docker-blue.png' alt='Docker' width={260} height={70} />
-            {/* {(dark)
-                ? <Image src='/logo/docker-white.png' alt='Docker' width={280} height={80} />
-                : <Image src='/logo/docker-blue.png' alt='Docker' width={260} height={70} />
-            } */}
+              }
             </div>
-        </div>
+            <div className={styles.tech_bar_img_long}>
+              <Image src='/logo/docker-blue.png' alt='Docker' width={260} height={70} />
+            </div>
+          </div>
         </div>
 
 

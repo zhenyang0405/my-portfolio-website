@@ -264,6 +264,14 @@
   cursor: pointer;
 }
 
+.resume_button_container_one {
+  display: block;
+}
+
+.resume_button_container_two {
+  display: none;
+}
+
 /************** Technologies ***************/
 
 .technologies_container {
@@ -1007,6 +1015,57 @@ div.linkedin_logo {
     filter: drop-shadow(5px 5px 10px #222);
   }
 
+  .resume_button_container_one {
+    display: none;
+  }
+  
+  .resume_button_container_two {
+    display: block;
+  }
+
+  /************** Technologies ***************/
+
+  .technologies_container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10%;
+    background-color: var(--color-bg-secondary);
+    /* max-width: 1200px; */
+    margin: auto;
+    padding: 1.5rem;
+    /* border-radius: 30px; */
+    padding: 30px;
+  }
+
+  .tech_text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-bottom: 50px;
+    color: var(--color-secondary);
+  }
+
+  .technologies_bar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tech_bar_img {
+    width: 60px;
+  }
+
+  .tech_bar_img_medium {
+    width: 80px;
+  }
+
+  .tech_bar_img_long {
+    width: 130px;
+  }
+
   /************* Project *************/
 
   .project__container {
@@ -1015,7 +1074,7 @@ div.linkedin_logo {
   }
 
   .project_header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
     color: var(--color-primary);
     text-align: center;
@@ -1024,7 +1083,7 @@ div.linkedin_logo {
   /************* Learning ************/
 
   .journey_header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
     width: 70vw;
     color: var(--color-text);
@@ -1036,7 +1095,7 @@ div.linkedin_logo {
   .tabs_container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding-top: 50px;
     padding-bottom: 100px;
@@ -1067,24 +1126,42 @@ div.linkedin_logo {
     transition: all 0.3s ease;
   }
 
+  .content_description {
+    font-size: 1.1rem;
+  }
+
+  .content_title {
+    font-size: 1.5rem;
+  }
+
   /*********** About Me **************/
+
+  .about_me__container {
+    max-width: 70vw;
+    height: auto;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+
+  .about_me__title {
+    font-size: 2.5rem;
+  }
 
   .about_me__description {
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: var(--color-text);
   }
 
   /*********** Get In Touch **************/
-
+  
   .title {
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--color-text);
-    text-align: center;
-    margin: 0;
-    padding-top: 100px;
+    font-size: 2.5rem;
+  }
+
+  .message_description {
+    font-size: 1.1rem;
   }
   
   /************* Footer **************/
@@ -1140,6 +1217,50 @@ div.linkedin_logo {
     padding-bottom: 50px;
   }
 
+  .my_photo__container {
+    width: 200px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 30px;
+    right: 0;
+    top: 5%;
+    filter: drop-shadow(5px 5px 10px #222);
+  }
+
+  .my_intro {
+    font-size: 2rem;
+    color: var(--color-primary);
+    line-height: 1.5;
+    font-family: loretta, serif;
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  .name {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .my_intro_short {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 50px;
+    color: var(--color-text);
+  }
+
+  .resume_button {
+    /* background: #64ffda;
+    color: #222;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    border: 2px solid #64ffda; */
+    font-size: 0.5rem;
+    cursor: pointer;
+  }
+
+
   /********** Project ************/
 
   .project__container {
@@ -1149,7 +1270,7 @@ div.linkedin_logo {
 
   .project_title {
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--color-text);
   }
@@ -1160,6 +1281,18 @@ div.linkedin_logo {
     width: 100%;
     font-weight: 500;
     justify-content: center;
+  }
+
+  .project_text {
+    width: 100%;
+    color: var(--color-text-offset);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  .tech {
+    font-size: 1rem;
   }
 
   /************* Journey Section **************/
