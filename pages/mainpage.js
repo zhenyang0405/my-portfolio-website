@@ -5,7 +5,8 @@ import 'animate.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import styled from 'styled-components'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
+// import useWindowDimensions from '../functions/custom-hook'
 
 const ButtonLight = styled.button`
   background: midnightblue;
@@ -37,16 +38,41 @@ const ButtonDark = styled.button`
   }
 `;
 
-const useDynamicWindowDimensions = dynamic(() => 
-  import('../functions/custom-hook'),
-  {ssr: false}
-);
+// const useDynamicWindowDimensions = dynamic(() => 
+//   import('../functions/custom-hook'),
+//   {ssr: false}
+// );
 
 const Mainpage = () => {
 
   const [dark, setDark] = useState(false);
   const [toggleTabIndex, setToggleTabIndex] = useState(1);
-  const { height, width } = useDynamicWindowDimensions;
+  // const { height, width } = useWindowDimensions();
+
+
+  const [windowDimensions, setWindowDimensions] = useState({width: window.innerWidth, height: window.innerHeight});
+
+  useEffect(() => {
+      if (typeof window !== 'undefined') {
+          const getWindowDimensions = () => {
+              const { innerWidth: width, innerHeight: height } = window;
+              setWindowDimensions({
+                  width: width,
+                  height: height
+              })
+          }
+      }
+
+      const handleResize = () => {
+          getWindowDimensions();
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => {
+          window.removeEventListener('resize', handleResize)
+      }
+  }, []);
+
 
   const toggleTab = (idx) => {
     setToggleTabIndex(idx);
@@ -80,7 +106,7 @@ const Mainpage = () => {
                     : <a href='#home'><Image src='/logo/symbol-black.png' alt='symbol' width={30} height={30} /></a>
                 }
                 </div>
-                {(width < 700)
+                {(windowDimensions.width < 700)
                 ? ''
                 : <div className={styles.main_menu_container}>
                     <p className={styles.menu_items} data-aos='fade-down' data-aos-delay='300' >01 &nbsp;&nbsp;<span className={styles.menu_option}><a href='#project'>Project</a></span></p>
@@ -106,7 +132,7 @@ const Mainpage = () => {
         <div className={styles.my__container}>
             <div className={styles.my_name__container}>
             <div className={styles.my_name__left}>
-                {(width < 1100)
+                {(windowDimensions.width < 1100)
                 ? <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
                 : <>
                     <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my</p>
@@ -123,7 +149,7 @@ const Mainpage = () => {
                 }
                 </div>
             </div>
-            {(width < 700) 
+            {(windowDimensions.width < 700) 
                 ? ''
                 : <>
                     <div className={styles.external_container}>
@@ -381,7 +407,7 @@ const Mainpage = () => {
             }
         </div> 
         </div>
-        {(width < 700)
+        {(windowDimensions.width < 700)
         ? <div className={styles.footer_container}>
             <div className={styles.external_social_container}>
                 <p className={styles.external_logo_social}>
