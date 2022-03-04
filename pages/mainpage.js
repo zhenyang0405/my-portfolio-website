@@ -5,7 +5,7 @@ import 'animate.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import styled from 'styled-components'
-import { useWindowDimensions } from '../functions/custom-hook'
+import dynamic from 'next/dynamic'
 
 const ButtonLight = styled.button`
   background: midnightblue;
@@ -37,11 +37,16 @@ const ButtonDark = styled.button`
   }
 `;
 
+const useDynamicWindowDimensions = dynamic(() => 
+  import('../functions/custom-hook'),
+  {ssr: false}
+);
+
 const Mainpage = () => {
 
   const [dark, setDark] = useState(false);
   const [toggleTabIndex, setToggleTabIndex] = useState(1);
-  const { height, width } = useWindowDimensions();
+  const { height, width } = useDynamicWindowDimensions;
 
   const toggleTab = (idx) => {
     setToggleTabIndex(idx);
@@ -122,12 +127,12 @@ const Mainpage = () => {
                 ? ''
                 : <>
                     <div className={styles.external_container}>
-                    <a href='https://github.com/zhenyang0405' target='_blank'><div className={`${styles.github_logo} ${styles.external_link_one}`} data-aos='fade-up' data-aos-delay='2100' ></div></a>
-                    <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank'><div className={`${styles.linkedin_logo} ${styles.external_link_two}`} data-aos='fade-up' data-aos-delay='2300' ></div></a>
+                    <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer' ><div className={`${styles.github_logo} ${styles.external_link_one}`} data-aos='fade-up' data-aos-delay='2100' ></div></a>
+                    <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={`${styles.linkedin_logo} ${styles.external_link_two}`} data-aos='fade-up' data-aos-delay='2300' ></div></a>
                     <div className={styles.external_after} data-aos='fade-up' data-aos-delay='2500'></div>
                     </div>
                     <div className={styles.email_container}>
-                    <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><span className={styles.email} data-aos='fade-up' data-aos-delay='2700' >zhenyang.chong0405@gmail.com</span></a>
+                    <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><span className={styles.email} data-aos='fade-up' data-aos-delay='2700' >zhenyang.chong0405@gmail.com</span></a>
                     <div className={styles.email_after} data-aos='fade-up' data-aos-delay='2900' ></div>
                     </div>
                 </>
@@ -172,7 +177,7 @@ const Mainpage = () => {
 
         {/* Project Section */}
         <div className={styles.project__container} id='project' >
-        <p className={styles.project_header} data-aos='fade-up'>Something that I've build</p>
+        <p className={styles.project_header} data-aos='fade-up'>Something that I&apos;ve build</p>
         <div className={styles.features_project__container}>
             <div className={styles.project}  data-aos='fade-up'>
             <Image src='/spotify-web-player.png' alt='Spotify Web Player' width={1000} height={650} />
@@ -184,19 +189,19 @@ const Mainpage = () => {
                 </p>
                 </div>
                 <p className={styles.project_tech_list}>
-                <span className={styles.tech}><a href='https://reactjs.org/' target='_blank' >React</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://reactrouter.com/' target='_blank' >React Router</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://developer.spotify.com/' target='_blank' >Spotify API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://expressjs.com/' target='_blank' >Express</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://axios-http.com/' target='_blank' >Axios</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://www.heroku.com/' target='_blank' >Heroku</a></span>
+                <span className={styles.tech}><a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>React</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://reactrouter.com/' target='_blank' rel='noopener noreferrer'>React Router</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://developer.spotify.com/' target='_blank' rel='noopener noreferrer'>Spotify API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://expressjs.com/' target='_blank' rel='noopener noreferrer'>Express</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://axios-http.com/' target='_blank' rel='noopener noreferrer'>Axios</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://www.heroku.com/' target='_blank' rel='noopener noreferrer'>Heroku</a></span>
                 </p>
                 <p className={styles.extra_logo_container}>
                 {(dark)
-                    ? <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank'><div className={styles.github_logo_white}></div></a>
-                    : <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank'><div className={styles.github_logo}></div></a>
+                    ? <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                    : <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
                 }
-                <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank'><div className={styles.external_logo}></div></a>
+                <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank' rel='noopener noreferrer'><div className={styles.external_logo}></div></a>
                 </p>
             </div>
             </div>
@@ -206,23 +211,22 @@ const Mainpage = () => {
                 {/* <p className={styles.features}>Featured Project</p> */}
                 <p className={styles.project_title}>Web Scraping</p>
                 <div className={styles.project_title__container}>
-                
                 <p className={styles.project_text}>
                     Automating Web Scraping using Cloud Run. A program that will get the price of camera every single day and notify user through Telegram. User is allowed to ask questions and able to receive automated response directly from Telegram’s bot, which is handled using Cloud Functions.
                 </p>
                 </div>
                 <p className={styles.project_tech_list}>
-                <span className={styles.tech}><a href='https://www.python.org/' target='_blank' >Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://www.selenium.dev/' target='_blank' >Selenium</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://docs.python-requests.org/en/latest/' target='_blank' >Requests</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://core.telegram.org/' target='_blank' >Telegram API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://cloud.google.com/run' target='_blank' >Cloud Run</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://cloud.google.com/functions' target='_blank' >Cloud Function</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://www.python.org/' target='_blank' rel='noopener noreferrer'>Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://www.selenium.dev/' target='_blank' rel='noopener noreferrer'>Selenium</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://docs.python-requests.org/en/latest/' target='_blank' rel='noopener noreferrer'>Requests</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://core.telegram.org/' target='_blank' rel='noopener noreferrer'>Telegram API</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://cloud.google.com/run' target='_blank' rel='noopener noreferrer'>Cloud Run</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://cloud.google.com/functions' target='_blank' rel='noopener noreferrer'>Cloud Function</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
                 </p>
                 <p className={styles.extra_logo_container}>
                 {(dark)
-                    ? <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank'><div className={styles.github_logo_white}></div></a>
-                    : <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank'><div className={styles.github_logo}></div></a>
+                    ? <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                    : <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
                 }
                 </p>
             </div>
@@ -240,14 +244,14 @@ const Mainpage = () => {
                 </p>
                 </div>
                 <p className={styles.project_tech_list}>
-                <span className={styles.tech}><a href='https://www.python.org/' target='_blank' >Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://github.com/pygame/pygame' target='_blank' >Pygame</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={styles.tech}><a href='https://pipenv.pypa.io/en/latest/' target='_blank' >Pipenv</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://www.python.org/' target='_blank' rel='noopener noreferrer'>Python</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://github.com/pygame/pygame' target='_blank' rel='noopener noreferrer'>Pygame</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className={styles.tech}><a href='https://pipenv.pypa.io/en/latest/' target='_blank' rel='noopener noreferrer'>Pipenv</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
                 </p>
                 <p className={styles.extra_logo_container}>
                 {(dark)
-                    ? <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank'><div className={styles.github_logo_white}></div></a>
-                    : <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank'><div className={styles.github_logo}></div></a>
+                    ? <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                    : <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
                 }
                 </p>
             </div>
@@ -272,7 +276,7 @@ const Mainpage = () => {
             <div className={toggleTabIndex === 1 ? `${styles.content} ${styles.active_content}` : `${styles.content}`}>
                 <Image src='/logo/datacamp.png' alt='DataCamp' width={600} height={100} quality={100} />
                 <p className={styles.content_description}>DataCamp is the leading online platform designed to teach modern professionals the data skills they need at their own pace. From non-coding essentials to data science and machine learning, all taught by leading experts in the field. DataCamp teaches companies and individuals the skills they need to work with data in the real world.</p>
-                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.datacamp.com/' target='_blank' >DataCamp</a></span></p>
+                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.datacamp.com/' target='_blank' rel='noopener noreferrer'>DataCamp</a></span></p>
                 <ul className={styles.content_list}>
                 <li>Python</li>
                 <li>Data Analysis</li>
@@ -285,7 +289,7 @@ const Mainpage = () => {
             <div className={toggleTabIndex === 2 ? `${styles.content} ${styles.active_content}` : `${styles.content}`}>
                 <Image src='/logo/realpython-banner.png' alt='RealPython' width={600} height={100} quality={100} />
                 <p className={styles.content_description}>RealPython is an online platform about Python Training & Expert Community. It consists of tutorials, books, and video courses. It was created, curated, and vetted by a community of expert Pythonistas.</p>
-                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://realpython.com/' target='_blank'>RealPython</a></span></p>
+                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://realpython.com/' target='_blank' rel='noopener noreferrer'>RealPython</a></span></p>
                 <ul className={styles.content_list}>
                 <li>HTTP Requests</li>
                 <li>Flask</li>
@@ -297,8 +301,8 @@ const Mainpage = () => {
             </div>
             <div className={toggleTabIndex === 3 ? `${styles.content} ${styles.active_content}` : `${styles.content}`}>
                 <Image src='/logo/codecademy-banner.png' alt='Codecademy' width={600} height={100} quality={100} />
-                <p className={styles.content_description}>Codecademy is an American online interactive platform that offers free coding classes in 12 different programming languages including Python, Java, Go, JavaScript, Ruby, SQL, C++, C#, Swift, and Sass, as well as markup languages HTML and CSS. The site also offers a paid "Pro" option that gives users access to personalized learning plans, quizzes, and realistic projects.</p>
-                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.codecademy.com/' target='_blank' >Codecademy</a></span></p>
+                <p className={styles.content_description}>Codecademy is an American online interactive platform that offers free coding classes in 12 different programming languages including Python, Java, Go, JavaScript, Ruby, SQL, C++, C#, Swift, and Sass, as well as markup languages HTML and CSS. The site also offers a paid &quotPro&quot option that gives users access to personalized learning plans, quizzes, and realistic projects.</p>
+                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.codecademy.com/' target='_blank' rel='noopener noreferrer'>Codecademy</a></span></p>
                 <ul className={styles.content_list}>
                 <li>SQL</li>
                 <li>React</li>
@@ -310,8 +314,8 @@ const Mainpage = () => {
             </div>
             <div className={toggleTabIndex === 4 ? `${styles.content} ${styles.active_content}` : `${styles.content}`}>
                 <Image src='/logo/algoexpert-banner.png' alt='AlgoExpert' width={600} height={100} quality={100} />
-                <p className={styles.content_description}>AlgoExpert is an online platform that help Software Engineers prepare for technical interviews. It's also provide concept about Data Structures and Algorithm, System Design, and Machine Learning courses.</p>
-                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.algoexpert.io/product' target='_blank' >AlgoExpert</a></span></p>
+                <p className={styles.content_description}>AlgoExpert is an online platform that help Software Engineers prepare for technical interviews. It&apos;s also provide concept about Data Structures and Algorithm, System Design, and Machine Learning courses.</p>
+                <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.algoexpert.io/product' target='_blank' rel='noopener noreferrer'>AlgoExpert</a></span></p>
                 <div className={styles.content_split}>
                 {/* <div className={styles.content_split_two_container}> */}
                     {/* <div className={styles.content_split_two_title}>
@@ -390,13 +394,13 @@ const Mainpage = () => {
         {/* About me */}
         <div className={styles.about_me__container} id='about me'>
             <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
-            <p className={styles.about_me__description} data-aos='fade-up' >I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I’m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
+            <p className={styles.about_me__description} data-aos='fade-up' >I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I&apos;m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
             <br/>
             <p className={styles.about_me__description} data-aos='fade-up' >On my previous job experience, I had been working on building an automated Telegram application to allow user to obtain their achievement points whenever they needed it right on their phone. The application had successfully <strong className={styles.highlight_text}>reduce the waiting time</strong> for user to obtain the information. The result lead to an <strong className={styles.highlight_text}>increase in sales</strong> due to the swift action that the user can take to increase their achievement points by purchasing more products. </p>
             <br/>
-            <p className={styles.about_me__description} data-aos='fade-up' >Beside focusing on customer experience, I’m also developed an backend system for customer service executive to easily <strong className={styles.highlight_text}>customerize the information</strong> that will display to user on the Telegram application. The application also collect user data to <strong className={styles.highlight_text}>identify gap and opportunity</strong> for the company to make decision on increase sales and improve user experience. </p>
+            <p className={styles.about_me__description} data-aos='fade-up' >Beside focusing on customer experience, I&apos;m also developed an backend system for customer service executive to easily <strong className={styles.highlight_text}>customerize the information</strong> that will display to user on the Telegram application. The application also collect user data to <strong className={styles.highlight_text}>identify gap and opportunity</strong> for the company to make decision on increase sales and improve user experience. </p>
             <br/>
-            <p className={styles.about_me__description} data-aos='fade-up' >I’m currently working on building mobile application using Flutter. I’m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I’m learning:</p>
+            <p className={styles.about_me__description} data-aos='fade-up' >I&apos;m currently working on building mobile application using Flutter. I&apos;m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I&apos;m learning:</p>
             <ol className={styles.about_me__description} data-aos='fade-up' >
             <li>Flutter</li>
             <li>Tensorflow</li>
@@ -409,10 +413,10 @@ const Mainpage = () => {
         <div className={styles.me__container} data-aos='fade-up'>
         <p className={styles.title}>Get In Touch</p>
         <div className={styles.message_container}>
-            <p className={styles.message_description}>I’m currently looking for opportunity where I can put my abilities to work for a mission I’m passionate about. I’m happy to connect with you, who share the same passion as me. </p>
+            <p className={styles.message_description}>I&apos;m currently looking for opportunity where I can put my abilities to work for a mission I&apos;m passionate about. I&apos;m happy to connect with you, who share the same passion as me. </p>
             {(dark)
-            ? <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><ButtonDark>Hire Me</ButtonDark></a>
-            : <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><ButtonLight>Hire Me</ButtonLight></a>
+            ? <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonDark>Hire Me</ButtonDark></a>
+            : <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonLight>Hire Me</ButtonLight></a>
             }
         </div> 
         </div>
@@ -422,17 +426,17 @@ const Mainpage = () => {
                 <p className={styles.external_logo_social}>
                 {(dark)
                   ? <>
-                      <a href='https://github.com/zhenyang0405' target='_blank'><div className={styles.github_logo_white}></div></a>
-                      <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank'><div className={styles.linkedin_logo_white}></div></a>
+                      <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
+                      <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo_white}></div></a>
                     </>
                   : <>
-                      <a href='https://github.com/zhenyang0405' target='_blank'><div className={styles.github_logo}></div></a>
-                      <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank'><div className={styles.linkedin_logo}></div></a>
+                      <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
+                      <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo}></div></a>
                     </>
                 }
                 </p>
                 <div className={styles.external_social_email_container}>
-                <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' ><p className={styles.email_social}>zhenyang.chong0405@gmail.com</p></a>
+                <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank'rel='noopener noreferrer' ><p className={styles.email_social}>zhenyang.chong0405@gmail.com</p></a>
                 </div>
             </div>
             </div>

@@ -3,6 +3,42 @@
   padding: 0;
 }
 
+.video_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+
+.video_container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: 100%;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto;
+
+}
+
 .main  {
   cursor: default;
   background-color: var(--color-bg);
@@ -39,6 +75,7 @@
 
 .main_symbol {
   margin-top: 28px;
+  margin-left: 15px;
 }
 
 .main_menu_container {
@@ -83,8 +120,9 @@
 }
 
 .theme_option {
-  margin-right: 30px;
+  margin-right: 15px;
   margin-top: 25px;
+  cursor: pointer;
 }
 
 .menu_container {
@@ -98,10 +136,11 @@
 .menu_items {
   margin: auto 0;
   font-weight: 500;
-  color: var(--color-secondary);
+  color: var(--color-text);
 }
 
-.menu_option {
+.menu_option a {
+  color: var(--color-primary);
   font-weight: 300; 
   transition: 0.3s;
 }
@@ -143,6 +182,7 @@
 .job {
   font-weight: 500;
   cursor: pointer;
+  color: var(--color-primary)
 }
 
 .external_link_one {
@@ -180,7 +220,7 @@
   writing-mode: vertical-rl;
   bottom: 150px;
   z-index: 2;
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .email_after {
@@ -274,7 +314,7 @@
   height: auto;
   display: flex;
   margin-bottom: 50px;
-  background-color: var(--color-bg-offset);
+  background-color: var(--color-bg-secondary);
   border-radius: 30px;
   /* filter: drop-shadow(2px 2px 10px grey) */
 }
@@ -321,7 +361,7 @@
 
 .project_text {
   width: 100%;
-  color: var(--color-text);
+  color: var(--color-text-offset);
   font-size: 1.2rem;
   line-height: 1.4;
   font-weight: 300;
@@ -351,6 +391,13 @@
   margin: 0;
 }
 
+div.github_logo_white {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  content: url('../public/GitHub-Mark-Light-120px-plus.png');
+}
+
 div.github_logo {
   margin: 0;
   width: 25px;
@@ -363,6 +410,13 @@ div.external_logo {
   width: 25px;
   height: 25px;
   content: var(--external_logo);
+}
+
+div.linkedin_logo_white {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  content: url('../public/logo/linkedin-white.png');
 }
 
 div.linkedin_logo {
@@ -392,7 +446,7 @@ div.linkedin_logo {
 .journey_header {
   font-size: 4rem;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-primary);
   text-align: center;
   margin: 0;
   padding-top: 100px;
@@ -457,11 +511,11 @@ div.linkedin_logo {
   color: var(--color-text);
 }
 
-.from_platform {
+.from_platform a {
   font-weight: 600;
 }
 
-.from_platform:hover {
+.from_platform:hover a {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -670,6 +724,10 @@ div.linkedin_logo {
   color: var(--color-text);
 }
 
+.highlight_text {
+  color: var(--color-primary);
+}
+
 /* .about_me__description_one {
   line-height: 1.5;
   font-size: 1.5rem;
@@ -703,13 +761,13 @@ div.linkedin_logo {
 .me__container {
   max-width: 100vw;
   height: auto;
-  background-color: var(--color-bg-third);
+  background-color: var(--color-bg-secondary);
   margin: 0 auto;
   padding-bottom: 100px;
 }
 
 .message_container {
-  max-width: 750px;
+  max-width: 700px;
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -720,7 +778,7 @@ div.linkedin_logo {
 .title {
   font-size: 4rem;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-primary);
   text-align: center;
   margin: 0;
   padding-top: 100px;
@@ -806,7 +864,7 @@ div.linkedin_logo {
   
   .project_text {
     width: 100%;
-    color: var(--color-text);
+    color: var(--color-text-offset);
     font-size: 1.1rem;
     line-height: 1.4;
     font-weight: 300;
@@ -949,7 +1007,7 @@ div.linkedin_logo {
     height: auto;
     display: flex;
     margin-bottom: 50px;
-    background-color: var(--color-bg-offset);
+    background-color: var(--color-bg-secondary);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -973,7 +1031,7 @@ div.linkedin_logo {
   
   .project_text {
     width: 100%;
-    color: var(--color-text);
+    color: var(--color-text-offset);
     font-size: 1.1rem;
     line-height: 1.4;
     font-weight: 300;
@@ -1213,7 +1271,7 @@ div.linkedin_logo {
   /************* Footer **************/
 
   .footer_container {
-    background-color: white;
+    background-color: var(--color-bg-secondary);
   }
 
   .external_social_container {
@@ -1238,6 +1296,7 @@ div.linkedin_logo {
     text-align: center;
     margin: 0 auto;
     padding-bottom: 50px;
+    color: var(--color-text)
   }
 }
 
