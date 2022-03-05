@@ -1215,29 +1215,25 @@ div.linkedin_logo {
 @media (width < 500px) {
   .my__container {
     margin: 0 auto;
-    max-width: 80vw;
+    max-width: 90vw;
     height: auto;
     position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 30px;
+    display: block;
+    /* flex-direction: column-reverse;
+    gap: 30px; */
+    padding-top: 40%;
   }
 
   .my_name__container {
-    width: 80%;
+    width: 90%;
     position: relative;
     padding-bottom: 50px;
+    text-align: left;
   }
 
   .my_photo__container {
     width: 200px;
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    padding-top: 0;
-    right: 0;
-    top: 5%;
-    filter: drop-shadow(5px 5px 10px #222);
+    display: none;
   }
 
   .my_intro {
@@ -1247,6 +1243,14 @@ div.linkedin_logo {
     font-family: loretta, serif;
     font-style: normal;
     font-weight: 300;
+  }
+
+  .my_intro_container_one {
+    display: none;
+  }
+
+  .my_intro_container_two {
+    display: block;
   }
 
   .short_intro_container_one {
