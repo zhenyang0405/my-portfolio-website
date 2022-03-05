@@ -89,13 +89,13 @@
 .top_bar {
   height: 80px;
   display: flex;
-  margin-left: 30px;
 }
 
 .top_left {
   height: 80px;
   flex-grow: 1;
   display: flex;
+  margin-left: 30px;
 }
 
 .top_left__menu {
@@ -1213,6 +1213,19 @@ div.linkedin_logo {
 }
 
 @media (width < 500px) {
+  .intro__container {
+    min-height: 40vh;
+    position: relative;
+  }
+
+  .top_left {
+    margin-left: 15px;
+  }
+
+  .top_right {
+    margin-right: 15px;
+  }
+
   .my__container {
     margin: 0 auto;
     max-width: 90vw;
@@ -1221,7 +1234,7 @@ div.linkedin_logo {
     display: block;
     /* flex-direction: column-reverse;
     gap: 30px; */
-    padding-top: 30%;
+    padding-top: 20%;
   }
 
   .my_name__container {
