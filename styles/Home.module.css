@@ -168,7 +168,7 @@
   font-size: 4rem;
   color: var(--color-primary);
   line-height: 0.2;
-  font-family: loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Bitter, loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
 }
@@ -1221,7 +1221,7 @@ div.linkedin_logo {
     display: block;
     /* flex-direction: column-reverse;
     gap: 30px; */
-    padding-top: 40%;
+    padding-top: 30%;
   }
 
   .my_name__container {
@@ -1284,6 +1284,14 @@ div.linkedin_logo {
     cursor: pointer;
   }
 
+  /************ Technology  ***********/
+
+  .technologies_bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
 
   /********** Project ************/
 
@@ -1331,6 +1339,11 @@ div.linkedin_logo {
     background-color: var(--color-bg-secondary);
   }
 
+  .content_tabs {
+    margin: 0;
+    padding: 0 10%;
+  }
+
   .content_list_split {
     padding: 0;
     margin: 0;
@@ -1348,5 +1361,13 @@ div.linkedin_logo {
     flex-direction: column;
     gap: 30px;
     margin-top: 10px;
+  }
+
+  .about_me__container {
+    max-width: 80vw;
+  }
+
+  .message_container {
+    max-width: 80vw;
   }
 }

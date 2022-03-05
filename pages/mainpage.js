@@ -108,7 +108,7 @@ const Mainpage = () => {
                 <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
               </div>
               <div className={styles.short_intro_container_two}>
-                <p className={styles.my_intro_short} data-aos='fade-right' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+                <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
               </div>
               
               {/* Screen size > 700 */}
@@ -119,7 +119,7 @@ const Mainpage = () => {
                 }
               </div>
               {/* Screen size <= 700 */}
-              <div data-aos='fade-right' className={styles.resume_button_container_two} >
+              <div data-aos='fade-right' className={styles.resume_button_container_two} data-aos-delay='1700' >
                 {(dark)
                     ? <ButtonDark className={styles.resume_button}>Resume</ButtonDark>
                     : <ButtonLight className={styles.resume_button}>Resume</ButtonLight>
