@@ -351,13 +351,13 @@ const Mainpage = () => {
         {/* About me */}
         <div className={styles.about_me__container} id='about me'>
             <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
-            <p className={styles.about_me__description} data-aos='fade-up' >I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I&apos;m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
+            <p className={styles.about_me__description} data-aos='fade-up' >I started having an interest in technology was back in 2019. From that time onwards, I started to pick up more about programming concepts, data structure and algorithms, and learn other programming languages. It has been 4 years going by, and I&apos;m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
             <br/>
-            <p className={styles.about_me__description} data-aos='fade-up' >I&apos;m currently working on building mobile application using Flutter. I&apos;m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I&apos;m learning:</p>
-            <ol className={styles.about_me__description} data-aos='fade-up' >
+            <p className={styles.about_me__description} data-aos='fade-up' >Currently, I&apos;m learning how to use Flutter to build an app for iOS, Android, and/or the web. In the meantime, I&apos;m also strengthening my knowledge and skill on Tensorflow. </p>
+            {/* <ol className={styles.about_me__description} data-aos='fade-up' >
             <li>Flutter</li>
             <li>Tensorflow</li>
-            </ol>
+            </ol> */}
         </div>
 
 

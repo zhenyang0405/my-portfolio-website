@@ -168,9 +168,10 @@
   font-size: 4rem;
   color: var(--color-primary);
   line-height: 0.2;
-  font-family: Bitter, loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: Bitter, serif;
+  /* font-family: Bitter, loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  /* font-style: normal;
+  font-weight: 300; */
 }
 
 .short_intro_container_one {
