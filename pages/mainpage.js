@@ -145,12 +145,12 @@ const Mainpage = () => {
             <div className={styles.tech_bar_img}>
               <Image src='/logo/javascript.png' alt='Javascript' width={80} height={80} />
             </div>
-            <div className={styles.tech_bar_img_medium}>
+            {/* <div className={styles.tech_bar_img_medium}>
               {(dark)
                 ? <Image src='/logo/nodejs-white.png' alt='Node js' width={130} height={80} />
                 : <Image src='/logo/nodejs.png' alt='Node js' width={130} height={80} />
               }
-            </div>
+            </div> */}
             <div className={styles.tech_bar_img}>
               <Image src='/logo/react.png' alt='React' width={80} height={80} />
             </div>
@@ -353,10 +353,6 @@ const Mainpage = () => {
             <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
             <p className={styles.about_me__description} data-aos='fade-up' >I started having interest about technology was back in 2019. From that time onwards, I started to pick-up more about programming concept, data structure and algorithm, and learn other programming languages. It have been 4 years going by, and I&apos;m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
             <br/>
-            <p className={styles.about_me__description} data-aos='fade-up' >On my previous job experience, I had been working on building an automated Telegram application to allow user to obtain their achievement points whenever they needed it right on their phone. The application had successfully <strong className={styles.highlight_text}>reduce the waiting time</strong> for user to obtain the information. The result lead to an <strong className={styles.highlight_text}>increase in sales</strong> due to the swift action that the user can take to increase their achievement points by purchasing more products. </p>
-            <br/>
-            <p className={styles.about_me__description} data-aos='fade-up' >Beside focusing on customer experience, I&apos;m also developed an backend system for customer service executive to easily <strong className={styles.highlight_text}>customerize the information</strong> that will display to user on the Telegram application. The application also collect user data to <strong className={styles.highlight_text}>identify gap and opportunity</strong> for the company to make decision on increase sales and improve user experience. </p>
-            <br/>
             <p className={styles.about_me__description} data-aos='fade-up' >I&apos;m currently working on building mobile application using Flutter. I&apos;m also actively participating in online tech event to increase my knowledge on respective field. Technologies that I&apos;m learning:</p>
             <ol className={styles.about_me__description} data-aos='fade-up' >
             <li>Flutter</li>
@@ -368,18 +364,18 @@ const Mainpage = () => {
 
         {/* Get In Touch Section */}
         <div className={styles.me__container} data-aos='fade-up'>
-          <p className={styles.title}>Get In Touch</p>
+          <p className={styles.title}></p>
           <div className={styles.message_container}>
               <p className={styles.message_description}>I&apos;m currently looking for opportunity where I can put my abilities to work for a mission I&apos;m passionate about. I&apos;m happy to connect with you, who share the same passion as me. </p>
               {(dark)
-              ? <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonDark>Hire Me</ButtonDark></a>
-              : <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank' rel='noopener noreferrer'><ButtonLight>Hire Me</ButtonLight></a>
+              ? <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><ButtonDark>Connect With Me</ButtonDark></a>
+              : <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><ButtonLight>Connect With Me</ButtonLight></a>
               }
           </div> 
         </div>
 
 
-                
+        {/* Footer Section */}
         <div className={styles.social_media_container}>
           <div className={styles.external_container}>
             <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer' ><div className={`${styles.github_logo} ${styles.external_link_one}`} data-aos='fade-up' data-aos-delay='2100' ></div></a>

@@ -1088,6 +1088,10 @@ div.linkedin_logo {
     text-align: center;
   }
 
+  /* .project_text {
+    text-align: left;
+  } */
+
   /************* Learning ************/
 
   .journey_header {
@@ -1280,7 +1284,7 @@ div.linkedin_logo {
   /********** Project ************/
 
   .project__container {
-    max-width: 80vw;
+    max-width: 90vw;
     margin: 100px auto;
   }
 
@@ -1297,6 +1301,10 @@ div.linkedin_logo {
     width: 100%;
     font-weight: 500;
     justify-content: center;
+  }
+
+  .project_text__container {
+    width: 90%;
   }
 
   .project_text {
