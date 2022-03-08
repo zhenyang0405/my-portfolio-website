@@ -114,15 +114,15 @@ const Mainpage = () => {
               {/* Screen size > 700 */}
               <div data-aos='fade-right' data-aos-delay='1700' className={styles.resume_button_container_one} >
                 {(dark)
-                    ? <ButtonDark className={styles.resume_button}>Resume</ButtonDark>
-                    : <ButtonLight className={styles.resume_button}>Resume</ButtonLight>
+                    ? <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonDark className={styles.resume_button}>Resume</ButtonDark></a>
+                    : <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonLight className={styles.resume_button}>Resume</ButtonLight></a>
                 }
               </div>
               {/* Screen size <= 700 */}
               <div data-aos='fade-right' className={styles.resume_button_container_two} data-aos-delay='1700' >
                 {(dark)
-                    ? <ButtonDark className={styles.resume_button}>Resume</ButtonDark>
-                    : <ButtonLight className={styles.resume_button}>Resume</ButtonLight>
+                    ? <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonDark className={styles.resume_button}>Resume</ButtonDark></a>
+                    : <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonLight className={styles.resume_button}>Resume</ButtonLight></a>
                 }
               </div>
             </div>

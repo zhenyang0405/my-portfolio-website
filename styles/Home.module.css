@@ -173,10 +173,10 @@
   font-size: 4rem;
   color: var(--color-primary);
   line-height: 0.2;
-  font-family: Bitter, serif;
+  font-family: 'Merriweather', serif;
   /* font-family: Bitter, loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-  /* font-style: normal;
-  font-weight: 300; */
+  font-style: normal;
+  font-weight: 300;
 }
 
 .short_intro_container_one {
@@ -189,7 +189,8 @@
 
 .name {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .my_intro_short {
@@ -469,7 +470,7 @@ div.linkedin_logo {
 
 .tabs_container {
   display: flex;
-  width: 50%;
+  width: 60%;
   margin: auto;
   padding-top: 50px;
 }
@@ -586,7 +587,7 @@ div.linkedin_logo {
 
 .about_me__description {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 300;
   color: var(--color-text);
 }
@@ -610,7 +611,7 @@ div.linkedin_logo {
   margin: auto;
   text-align: center;
   line-height: 1.5;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 300;
 }
 
@@ -657,11 +658,6 @@ div.linkedin_logo {
 
   .my_intro {
     font-size: 2.8rem;
-    color: var(--color-primary);
-    line-height: 0.2;
-    font-family: loretta, serif;
-    font-style: normal;
-    font-weight: 300;
   }
 
   .name {
@@ -768,12 +764,7 @@ div.linkedin_logo {
   }
 
   .my_intro {
-    font-size: 2.8rem;
-    color: var(--color-primary);
     line-height: 1.5;
-    font-family: loretta, serif;
-    font-style: normal;
-    font-weight: 300;
     margin: 0;
   }
 
@@ -945,7 +936,7 @@ div.linkedin_logo {
   /************* Me Section *******************/
 
   .message_container {
-    max-width: 70vw;
+    max-width: 80vw;
     margin: auto;
     text-align: center;
     line-height: 1.5;
@@ -988,21 +979,23 @@ div.linkedin_logo {
   }
 
   .my_name__container {
-    width: 80%;
+    width: 100%;
     position: relative;
     padding-bottom: 50px;
     margin: 0 auto;
     text-align: center;
   }
 
+  .my_intro_container_one {
+    display: none;
+  }
+
+  .my_intro_container_two {
+    display: block;
+  }
+
   .my_intro {
     font-size: 2.5rem;
-    color: var(--color-primary);
-    line-height: 1.5;
-    font-family: loretta, serif;
-    font-style: normal;
-    font-weight: 300;
-    margin: 0;
   }
 
   .name {
@@ -1059,13 +1052,19 @@ div.linkedin_logo {
     color: var(--color-secondary);
   }
 
-  .technologies_bar {
+  /* .technologies_bar {
     width: 100%;
     height: auto;
     display: flex;
     gap: 50px;
     justify-content: center;
     flex-wrap: wrap;
+  } */
+
+  .technologies_bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
   }
 
   .tech_bar_img {
@@ -1083,7 +1082,7 @@ div.linkedin_logo {
   /************* Project *************/
 
   .project__container {
-    max-width: 400px;
+    max-width: 80vw;
     margin: 100px auto;
   }
 
@@ -1092,6 +1091,10 @@ div.linkedin_logo {
     font-weight: 500;
     color: var(--color-primary);
     text-align: center;
+  }
+
+  .project_text__container {
+    width: 90%;
   }
 
   /* .project_text {
@@ -1155,7 +1158,7 @@ div.linkedin_logo {
   /*********** About Me **************/
 
   .about_me__container {
-    max-width: 70vw;
+    max-width: 80vw;
     height: auto;
     margin: auto;
     padding-bottom: 50px;
@@ -1257,11 +1260,6 @@ div.linkedin_logo {
 
   .my_intro {
     font-size: 2rem;
-    color: var(--color-primary);
-    line-height: 1.5;
-    font-family: loretta, serif;
-    font-style: normal;
-    font-weight: 300;
   }
 
   .my_intro_container_one {
