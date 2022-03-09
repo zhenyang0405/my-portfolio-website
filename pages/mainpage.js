@@ -197,7 +197,7 @@ const Mainpage = () => {
                       ? <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
                       : <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
                   }
-                  <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank' rel='noopener noreferrer'><div className={styles.external_logo}></div></a>
+                  {/* <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank' rel='noopener noreferrer'><div className={styles.external_logo}></div></a> */}
                   </p>
               </div>
               </div>
