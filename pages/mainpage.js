@@ -360,16 +360,10 @@ const Mainpage = () => {
         <div className={styles.footer_container}>
           <div className={styles.external_social_container}>
             <p className={styles.external_logo_social}>
-            {(dark)
-              ? <>
-                  <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                  <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo_white}></div></a>
-                </>
-              : <>
-                  <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                  <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo}></div></a>
-                </>
-            }
+              <>
+                <a href='https://github.com/zhenyang0405' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
+                <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><div className={styles.linkedin_logo}></div></a>
+              </>
             </p>
             <div className={styles.external_social_email_container}>
               <a href='mailto:zhenyang.chong0405@gmail.com' target='_blank'rel='noopener noreferrer' ><p className={styles.email_social}>zhenyang.chong0405@gmail.com</p></a>
