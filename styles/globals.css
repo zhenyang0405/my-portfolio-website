@@ -27,26 +27,28 @@ a {
   --color-text-offset: #2d334a;
   --color-primary: #222;
   --color-secondary: #272343;
-  --github-logo: url('../public/GitHub-Mark-120px-plus.png');
-  --external_logo: url('../public/external-black.png');
-  --linkedin_logo: url('../public/logo/linkedin-black.png');
-  --theme-icon: url('../public/icons8-sun-90.png');
+  --github-logo-project: url("../public/GitHub-Mark-120px-plus.png");
+  --github-logo: url("../public/GitHub-Mark-120px-plus.png");
+  --external_logo: url("../public/external-black.png");
+  --linkedin_logo: url("../public/logo/linkedin-black.png");
+  --theme-icon: url("../public/icons8-sun-90.png");
 }
 
-html[data-theme='dark'] {
-  --color-bg: #0A1929;
+html[data-theme="dark"] {
+  --color-bg: #0a1929;
   --color-bg-secondary: rgb(0, 30, 60);
   --color-bg-third: #426e9c;
   --color-bg-gradient: linear-gradient(rgb(10, 25, 41) 0%, rgb(0, 30, 60) 100%);
-  --color-bg-offset: #0A1929;
+  --color-bg-offset: #0a1929;
   --color-bg-border: #64ffda;
   --color-border: #020c1b;
   --color-text: #fffffe;
   --color-text-offset: #adbed4;
   --color-primary: #64ffda;
   --color-secondary: #64ffda;
-  --github-logo: url('../public/logo/github-green.png');
-  --external_logo: url('../public/external-white.png');
-  --linkedin_logo: url('../public/logo/linkedin-green.png');
-  --theme-icon: url('../public/icons8-moon-and-stars-96.png');
+  --github-logo-project: url("../public/GitHub-Mark-Light-120px-plus.png");
+  --github-logo: url("../public/logo/github-green.png");
+  --external_logo: url("../public/external-white.png");
+  --linkedin_logo: url("../public/logo/linkedin-green.png");
+  --theme-icon: url("../public/icons8-moon-and-stars-96.png");
 }

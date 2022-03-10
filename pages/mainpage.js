@@ -101,9 +101,6 @@ const Mainpage = () => {
                   <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is</p>
                   <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' ><span className={styles.name}>Zhen Yang</span>.</p>
                 </div>
-                
-                {/* <p className={styles.my_intro}>Hi, my</p> */}
-                {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
                 <div className={styles.short_intro_container_one}>
                   <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
                 </div>
@@ -145,12 +142,6 @@ const Mainpage = () => {
             <div className={styles.tech_bar_img}>
               <Image src='/logo/javascript.png' alt='Javascript' width={80} height={80} />
             </div>
-            {/* <div className={styles.tech_bar_img_medium}>
-              {(dark)
-                ? <Image src='/logo/nodejs-white.png' alt='Node js' width={130} height={80} />
-                : <Image src='/logo/nodejs.png' alt='Node js' width={130} height={80} />
-              }
-            </div> */}
             <div className={styles.tech_bar_img}>
               <Image src='/logo/react.png' alt='React' width={80} height={80} />
             </div>
@@ -193,18 +184,13 @@ const Mainpage = () => {
                   <span className={styles.tech}><a href='https://www.heroku.com/' target='_blank' rel='noopener noreferrer'>Heroku</a></span>
                   </p>
                   <p className={styles.extra_logo_container}>
-                  {(dark)
-                      ? <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                      : <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                  }
-                  {/* <a href='https://spotify-web-player-my.herokuapp.com/' target='_blank' rel='noopener noreferrer'><div className={styles.external_logo}></div></a> */}
+                  <a href='https://github.com/zhenyang0405/Spotify-Web-Player' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_project}></div></a>
                   </p>
               </div>
               </div>
               <div className={styles.project} data-aos='fade-up'>
               <Image src='/moment-web-scraping.png' alt='Moment Web Scraping' width={1000} height={650} />
               <div className={styles.project_text__container}>
-                  {/* <p className={styles.features}>Featured Project</p> */}
                   <p className={styles.project_title}>Web Scraping</p>
                   <div className={styles.project_title__container}>
                   <p className={styles.project_text}>
@@ -220,10 +206,7 @@ const Mainpage = () => {
                   <span className={styles.tech}><a href='https://cloud.google.com/functions' target='_blank' rel='noopener noreferrer'>Cloud Function</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
                   </p>
                   <p className={styles.extra_logo_container}>
-                  {(dark)
-                      ? <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                      : <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                  }
+                  <a href='https://github.com/zhenyang0405/Web-Scraping-Project' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_project}></div></a>
                   </p>
               </div>
               
@@ -245,10 +228,7 @@ const Mainpage = () => {
                   <span className={styles.tech}><a href='https://pipenv.pypa.io/en/latest/' target='_blank' rel='noopener noreferrer'>Pipenv</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
                   </p>
                   <p className={styles.extra_logo_container}>
-                  {(dark)
-                      ? <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_white}></div></a>
-                      : <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo}></div></a>
-                  }
+                  <a href='https://github.com/zhenyang0405/Sudoku-Solver' target='_blank' rel='noopener noreferrer'><div className={styles.github_logo_project}></div></a>
                   </p>
               </div>
               </div>
@@ -313,12 +293,7 @@ const Mainpage = () => {
                 <p className={styles.content_description}>AlgoExpert is an online platform that help Software Engineers prepare for technical interviews. It&apos;s also provide concept about Data Structures and Algorithm, System Design, and Machine Learning courses.</p>
                 <p className={styles.content_title}>Skill Learned From <span className={styles.from_platform}><a href='https://www.algoexpert.io/product' target='_blank' rel='noopener noreferrer'>AlgoExpert</a></span></p>
                 <div className={styles.content_split}>
-                {/* <div className={styles.content_split_two_container}> */}
-                    {/* <div className={styles.content_split_two_title}>
-                    <p className={styles.content_split_title}>Data Structures and Algorithms</p>
-                    <p className={styles.content_split_title}>System Design</p>
-                    </div> */}
-                    <div className={styles.content_split_two_contents}>
+                  <div className={styles.content_split_two_contents}>
                     <ul className={styles.content_list_split}>
                         <p className={styles.content_split_title}>Data Structures and Algorithms</p>
                         <li>Big O Notation</li>
@@ -338,8 +313,7 @@ const Mainpage = () => {
                         <li>Load Balancers</li>
                         <li>Pub/Sub</li>
                     </ul>
-                    </div>
-                {/* </div> */}
+                  </div>
                 </div>
             </div>
             </div>
@@ -353,10 +327,6 @@ const Mainpage = () => {
             <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
             <p className={styles.about_me__description} data-aos='fade-up' >I started having an interest in technology was back in 2019. From that time onwards, I started to pick up more about programming concepts, data structure and algorithms, and learn other programming languages. It has been 4 years going by, and I&apos;m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
             <p className={styles.about_me__description} data-aos='fade-up' >Currently, I&apos;m exploring Flutter to build an app for iOS, Android, and/or the web. In the meantime, I&apos;m also strengthening my knowledge and skill on Tensorflow. </p>
-            {/* <ol className={styles.about_me__description} data-aos='fade-up' >
-            <li>Flutter</li>
-            <li>Tensorflow</li>
-            </ol> */}
         </div>
 
 

@@ -412,11 +412,11 @@
   margin: 0;
 }
 
-div.github_logo_white {
+div.github_logo_project {
   margin: 0;
   width: 25px;
   height: 25px;
-  content: url("../public/GitHub-Mark-Light-120px-plus.png");
+  content: var(--github-logo-project);
 }
 
 div.github_logo {
@@ -1221,9 +1221,7 @@ div.linkedin_logo {
     height: auto;
     position: relative;
     display: block;
-    /* flex-direction: column-reverse;
-    gap: 30px; */
-    padding-top: 20%;
+    padding-top: 15%;
   }
 
   .my_name__container {
