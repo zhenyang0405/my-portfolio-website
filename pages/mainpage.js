@@ -65,7 +65,7 @@ const Mainpage = () => {
     <main className={styles.main} id='home'>
         {/* Intro Section */}
         <div className={styles.intro__container}>
-        <div className={styles.top_bar}>
+          <div className={styles.top_bar}>
             <div className={styles.top_left}>
                 <div className={styles.main_symbol} data-aos='fade-down' data-aos-delay='100' >
                 {(dark)
@@ -90,47 +90,47 @@ const Mainpage = () => {
                 
                 </div>
             </div>
-            </div>
-        <div className={styles.my__container}>
+          </div>
+          <div className={styles.my__container}>
             <div className={styles.my_name__container}>
-            <div className={styles.my_name__left}>
-              <div className={styles.my_intro_container_one}>
-                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
+              <div className={styles.my_name__left}>
+                <div className={styles.my_intro_container_one}>
+                  <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p>
+                </div>
+                <div className={styles.my_intro_container_two}>
+                  <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is</p>
+                  <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' ><span className={styles.name}>Zhen Yang</span>.</p>
+                </div>
+                
+                {/* <p className={styles.my_intro}>Hi, my</p> */}
+                {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
+                <div className={styles.short_intro_container_one}>
+                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+                </div>
+                <div className={styles.short_intro_container_two}>
+                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+                </div>
+                
+                {/* Screen size > 700 */}
+                <div data-aos='fade-right' data-aos-delay='1700' className={styles.resume_button_container_one} >
+                  {(dark)
+                      ? <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonDark className={styles.resume_button}>Resume</ButtonDark></a>
+                      : <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonLight className={styles.resume_button}>Resume</ButtonLight></a>
+                  }
+                </div>
+                {/* Screen size <= 700 */}
+                <div data-aos='fade-right' className={styles.resume_button_container_two} data-aos-delay='1700' >
+                  {(dark)
+                      ? <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonDark className={styles.resume_button}>Resume</ButtonDark></a>
+                      : <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonLight className={styles.resume_button}>Resume</ButtonLight></a>
+                  }
+                </div>
               </div>
-              <div className={styles.my_intro_container_two}>
-                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1100' >Hi, my name is</p>
-                <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' ><span className={styles.name}>Zhen Yang</span>.</p>
-              </div>
-              
-              {/* <p className={styles.my_intro}>Hi, my</p> */}
-              {/* <p className={styles.my_intro}>Hi, my name is <span className={styles.name}>Zhen Yang</span>.</p> */}
-              <div className={styles.short_intro_container_one}>
-                <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
-              </div>
-              <div className={styles.short_intro_container_two}>
-                <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
-              </div>
-              
-              {/* Screen size > 700 */}
-              <div data-aos='fade-right' data-aos-delay='1700' className={styles.resume_button_container_one} >
-                {(dark)
-                    ? <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonDark className={styles.resume_button}>Resume</ButtonDark></a>
-                    : <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonLight className={styles.resume_button}>Resume</ButtonLight></a>
-                }
-              </div>
-              {/* Screen size <= 700 */}
-              <div data-aos='fade-right' className={styles.resume_button_container_two} data-aos-delay='1700' >
-                {(dark)
-                    ? <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonDark className={styles.resume_button}>Resume</ButtonDark></a>
-                    : <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'><ButtonLight className={styles.resume_button}>Resume</ButtonLight></a>
-                }
-              </div>
-            </div>
             </div>
             <div className={styles.my_photo__container} data-aos='fade-left' data-aos-delay='1900'>
               <Image src='/zhenyang.png' alt='Zhen Yang' width={520} height={700} layout='responsive' />
             </div>
-        </div>
+          </div>
         </div>
         
 
@@ -352,8 +352,7 @@ const Mainpage = () => {
         <div className={styles.about_me__container} id='about me'>
             <p className={styles.about_me__title} data-aos='fade-up'>About Me</p>
             <p className={styles.about_me__description} data-aos='fade-up' >I started having an interest in technology was back in 2019. From that time onwards, I started to pick up more about programming concepts, data structure and algorithms, and learn other programming languages. It has been 4 years going by, and I&apos;m still in love with technology, I believe it is time to step out of my comfort zone and truly live a life that I always wanted. So I decided to venture into the field of technology with uncertainty but with a plan and lots of passion.</p>
-            <br/>
-            <p className={styles.about_me__description} data-aos='fade-up' >Currently, I&apos;m learning how to use Flutter to build an app for iOS, Android, and/or the web. In the meantime, I&apos;m also strengthening my knowledge and skill on Tensorflow. </p>
+            <p className={styles.about_me__description} data-aos='fade-up' >Currently, I&apos;m exploring Flutter to build an app for iOS, Android, and/or the web. In the meantime, I&apos;m also strengthening my knowledge and skill on Tensorflow. </p>
             {/* <ol className={styles.about_me__description} data-aos='fade-up' >
             <li>Flutter</li>
             <li>Tensorflow</li>
@@ -366,7 +365,7 @@ const Mainpage = () => {
         <div className={styles.me__container} data-aos='fade-up'>
           <p className={styles.title}></p>
           <div className={styles.message_container}>
-              <p className={styles.message_description}>I&apos;m currently looking for opportunity where I can put my abilities to work for a mission I&apos;m passionate about. I&apos;m happy to connect with you, who share the same passion as me. </p>
+              <p className={styles.message_description}>I&apos;m currently looking for an opportunity where I can put my abilities to work for a mission I&apos;m passionate about and to give value to the company that I work with. I&apos;m happy to connect with you, who share the same passion as me. </p>
               {(dark)
               ? <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><ButtonDark>Connect With Me</ButtonDark></a>
               : <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><ButtonLight>Connect With Me</ButtonLight></a>

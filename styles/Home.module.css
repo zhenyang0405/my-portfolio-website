@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,900&display=swap");
 .container {
   margin: 0;
   padding: 0;
@@ -9,14 +9,14 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: hidden;
 }
 
 .video_container video {
   /* Make video to at least 100% wide and tall */
-  min-width: 100%; 
-  min-height: 100%; 
+  min-width: 100%;
+  min-height: 100%;
 
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   width: 100%;
@@ -26,21 +26,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .video {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-
 }
 
-.main  {
+.main {
   cursor: default;
   background-color: var(--color-bg);
 }
@@ -89,7 +88,11 @@
 
 .top_bar {
   height: 80px;
+  width: 100vw;
   display: flex;
+  position: fixed;
+  background-color: var(--color-bg);
+  z-index: 1;
 }
 
 .top_left {
@@ -108,14 +111,14 @@
   height: 50px;
   margin-left: 10px;
   margin-top: 15px;
-  background: url('../public/me-circle.png');
+  background: url("../public/me-circle.png");
   background-size: cover;
 }
 
 .top_right {
   height: 80px;
   flex-grow: 2;
-  position: relative;
+  /* position: relative; */
   margin-right: 30px;
 }
 
@@ -141,15 +144,14 @@
 
 .menu_option a {
   color: var(--color-primary);
-  font-weight: 300; 
+  font-weight: 300;
   transition: 0.3s;
 }
-
 
 .my_name__container {
   width: 54%;
   position: absolute;
-  top: 25%;
+  top: 35%;
 }
 
 .my_name__left {
@@ -169,7 +171,7 @@
   font-size: 4rem;
   color: var(--color-primary);
   line-height: 0.2;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   /* font-family: Bitter, loretta, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-style: normal;
   font-weight: 300;
@@ -199,8 +201,7 @@
 
 .job {
   font-weight: 500;
-  cursor: pointer;
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 .external_link_one {
@@ -225,7 +226,7 @@
   width: 1px;
   height: 130px;
   margin: 0px auto;
-  background-color: var(--color-text-offset);;
+  background-color: var(--color-text-offset);
   position: fixed;
   left: 60px;
   bottom: 0;
@@ -259,7 +260,7 @@
   display: block;
   position: absolute;
   right: 0;
-  top: 80px;
+  top: 20%;
   filter: drop-shadow(5px 5px 10px #222);
 }
 
@@ -364,7 +365,7 @@
   flex-direction: column;
   width: 90%;
   margin: auto 0;
-  margin-right: 20px
+  margin-right: 20px;
 }
 
 .project_title__container_right {
@@ -415,7 +416,7 @@ div.github_logo_white {
   margin: 0;
   width: 25px;
   height: 25px;
-  content: url('../public/GitHub-Mark-Light-120px-plus.png');
+  content: url("../public/GitHub-Mark-Light-120px-plus.png");
 }
 
 div.github_logo {
@@ -436,7 +437,7 @@ div.linkedin_logo_white {
   margin: 0;
   width: 25px;
   height: 25px;
-  content: url('../public/logo/linkedin-white.png');
+  content: url("../public/logo/linkedin-white.png");
 }
 
 div.linkedin_logo {
@@ -566,7 +567,6 @@ div.linkedin_logo {
 
 /******************* About Me ******************/
 
-
 .about_me__container {
   max-width: 60vw;
   height: auto;
@@ -603,7 +603,7 @@ div.linkedin_logo {
 }
 
 .message_container {
-  max-width: 700px;
+  max-width: 50vw;
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -617,7 +617,7 @@ div.linkedin_logo {
   color: var(--color-primary);
   text-align: center;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .message_description {
@@ -625,7 +625,6 @@ div.linkedin_logo {
   margin-top: 30px;
   color: var(--color-text);
 }
-
 
 .social_media_container {
   display: block;
@@ -635,7 +634,6 @@ div.linkedin_logo {
   display: none;
   background-color: var(--color-bg-secondary);
 }
-
 
 @media (width < 1400px) {
   .my__container {
@@ -649,7 +647,7 @@ div.linkedin_logo {
   .my_name__container {
     width: 48%;
     position: absolute;
-    top: 28%;
+    top: 37%;
   }
 
   .my_intro {
@@ -671,11 +669,8 @@ div.linkedin_logo {
 
   .my_photo__container {
     width: 40%;
-    display: block;
-    position: absolute;
-    right: 3%;
-    top: 20%;
-    filter: drop-shadow(5px 5px 10px #222);
+    right: 10%;
+    top: 25%;
   }
 
   /************* Project *************/
@@ -692,17 +687,17 @@ div.linkedin_logo {
     margin: auto 0;
     margin-left: 20px;
   }
-  
+
   .features {
     color: var(--color-text);
   }
-  
+
   .project_tech_list {
     width: 100%;
     font-weight: 400;
     line-height: 1.6;
   }
-  
+
   .project_text {
     width: 100%;
     color: var(--color-text-offset);
@@ -712,7 +707,7 @@ div.linkedin_logo {
     padding-right: 10px;
     margin: 0;
   }
-  
+
   .project_title {
     font-weight: 600;
     font-size: 2rem;
@@ -729,7 +724,6 @@ div.linkedin_logo {
     padding-top: 50px;
     padding-bottom: 100px;
   }
-
 }
 
 @media (width < 1100px) {
@@ -782,10 +776,8 @@ div.linkedin_logo {
     display: block;
     position: relative;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 100px;
     right: 0;
-    top: 5%;
-    filter: drop-shadow(5px 5px 10px #222);
   }
 
   .technologies_container {
@@ -799,7 +791,7 @@ div.linkedin_logo {
     display: flex;
     flex-direction: column;
   }
-  
+
   .tech_text {
     text-align: center;
     font-size: 1.5rem;
@@ -807,7 +799,7 @@ div.linkedin_logo {
     padding-bottom: 50px;
     color: var(--color-secondary);
   }
-  
+
   .technologies_bar {
     width: 100%;
     height: auto;
@@ -823,7 +815,7 @@ div.linkedin_logo {
     max-width: 700px;
     margin: 100px auto;
   }
-  
+
   .project {
     width: 100%;
     height: auto;
@@ -842,14 +834,14 @@ div.linkedin_logo {
     margin: 0 auto;
     position: relative;
   }
-  
+
   .project_tech_list {
     width: 100%;
     font-weight: 400;
     line-height: 1.6;
     text-align: center;
   }
-  
+
   .project_text {
     width: 100%;
     color: var(--color-text-offset);
@@ -858,7 +850,7 @@ div.linkedin_logo {
     font-weight: 300;
     text-align: center;
   }
-  
+
   .project_title {
     font-weight: 600;
     font-size: 2rem;
@@ -904,7 +896,7 @@ div.linkedin_logo {
     padding-top: 50px;
     padding-bottom: 100px;
   }
-  
+
   .tabs_option {
     display: flex;
     flex-direction: row;
@@ -923,7 +915,7 @@ div.linkedin_logo {
     border-bottom: 0.5rem solid var(--color-border);
     color: var(--color-text);
   }
-  
+
   .active_btn {
     border-bottom: 0.5rem solid var(--color-bg-border);
     transition: all 0.3s ease;
@@ -932,7 +924,7 @@ div.linkedin_logo {
   /************* Me Section *******************/
 
   .message_container {
-    max-width: 80vw;
+    max-width: 70vw;
     margin: auto;
     text-align: center;
     line-height: 1.5;
@@ -942,11 +934,6 @@ div.linkedin_logo {
 
   .title {
     font-size: 3rem;
-    font-weight: 500;
-    color: var(--color-text);
-    text-align: center;
-    margin: 0;
-    padding-top: 100px;
   }
 
   .message_description {
@@ -1012,16 +999,13 @@ div.linkedin_logo {
     display: block;
     position: relative;
     margin: 0 auto;
-    padding-top: 0;
-    right: 0;
-    top: 5%;
-    filter: drop-shadow(5px 5px 10px #222);
+    padding-top: 150px;
   }
 
   .resume_button_container_one {
     display: none;
   }
-  
+
   .resume_button_container_two {
     display: block;
   }
@@ -1117,7 +1101,7 @@ div.linkedin_logo {
     padding-top: 50px;
     padding-bottom: 100px;
   }
-  
+
   .tabs_option {
     display: flex;
     flex-direction: row;
@@ -1137,7 +1121,7 @@ div.linkedin_logo {
     border-bottom: 0.5rem solid var(--color-border);
     color: var(--color-text);
   }
-  
+
   .active_btn {
     border-bottom: 0.5rem solid var(--color-bg-border);
     transition: all 0.3s ease;
@@ -1180,7 +1164,7 @@ div.linkedin_logo {
   .message_description {
     font-size: 1.1rem;
   }
-  
+
   /************* Footer **************/
   .social_media_container {
     display: none;
@@ -1213,7 +1197,7 @@ div.linkedin_logo {
     text-align: center;
     margin: 0 auto;
     padding-bottom: 50px;
-    color: var(--color-text)
+    color: var(--color-text);
   }
 }
 
@@ -1247,6 +1231,7 @@ div.linkedin_logo {
     position: relative;
     padding-bottom: 50px;
     text-align: left;
+    margin-top: 100px;
   }
 
   .my_photo__container {
@@ -1269,11 +1254,11 @@ div.linkedin_logo {
   .short_intro_container_one {
     display: none;
   }
-  
+
   .short_intro_container_two {
     display: block;
   }
-  
+
   .name {
     font-size: 2rem;
     font-weight: 700;
@@ -1304,7 +1289,6 @@ div.linkedin_logo {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
-
 
   /********** Project ************/
 
@@ -1361,14 +1345,14 @@ div.linkedin_logo {
     padding: 0;
     margin: 0;
   }
-  
+
   .content_list_split li {
     line-height: 2rem;
     margin-right: 30px;
     color: var(--color-text);
     list-style-position: inside;
   }
-  
+
   .content_split_two_contents {
     display: flex;
     flex-direction: column;
