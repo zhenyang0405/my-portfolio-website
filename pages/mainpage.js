@@ -102,10 +102,10 @@ const Mainpage = () => {
                   <p className={styles.my_intro} data-aos='fade-right' data-aos-delay='1300' ><span className={styles.name}>Zhen Yang</span>.</p>
                 </div>
                 <div className={styles.short_intro_container_one}>
-                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program.</p>
                 </div>
                 <div className={styles.short_intro_container_two}>
-                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program. <span className={styles.job}>Currently looking for new opportunity</span>.</p>
+                  <p className={styles.my_intro_short} data-aos='fade-right' data-aos-delay='1500' >I’m a Self-Taught Programmer specialising in Python and Javascript. Always looking for ways to automate repetitive task, explore new technologies and build interactive program.</p>
                 </div>
                 
                 {/* Screen size > 700 */}
@@ -335,7 +335,8 @@ const Mainpage = () => {
         <div className={styles.me__container} data-aos='fade-up'>
           <p className={styles.title}></p>
           <div className={styles.message_container}>
-              <p className={styles.message_description}>I&apos;m currently looking for an opportunity where I can put my abilities to work for a mission I&apos;m passionate about and to give value to the company that I work with. I&apos;m happy to connect with you, who share the same passion as me. </p>
+              <p className={styles.message_description}>Although I&apos;m currently not looking for any opportunity, but I&apos;m happy to connect with you.</p>
+              {/* <p className={styles.message_description}>I&apos;m currently looking for an opportunity where I can put my abilities to work for a mission I&apos;m passionate about and to give value to the company that I work with. I&apos;m happy to connect with you, who share the same passion as me. </p> */}
               {(dark)
               ? <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><ButtonDark>Connect With Me</ButtonDark></a>
               : <a href='https://www.linkedin.com/in/chongzhenyang0405/' target='_blank' rel='noopener noreferrer'><ButtonLight>Connect With Me</ButtonLight></a>
